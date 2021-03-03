@@ -8,7 +8,8 @@
     CAPRA
   </title>
   <!-- Favicon -->
-  <link href="<?php echo base_url('assets/argon/img/brand/favicon.png'); ?>" rel="icon" type="image/png">
+  <!-- <link href="<?php echo base_url('assets/argon/img/brand/favicon.png'); ?>" rel="icon" type="image/png"> -->
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/5/56/Lambang_IPDN.png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->

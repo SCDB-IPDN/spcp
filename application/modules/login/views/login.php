@@ -1,201 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('assets/img/apple-icon.png'); ?>">
-  <link rel="icon" type="image/png" href="<?php echo base_url('assets/img/favicon.png'); ?>">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('assets/login/img/apple-icon.png'); ?>">
+  <!-- <link rel="icon" type="image/png" href="<?php echo base_url('assets/login/img/favicon.png'); ?>"> -->
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/5/56/Lambang_IPDN.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    LOGIN
+    SPCP LOGIN
   </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <!-- Nucleo Icons -->
-  <link href="<?php echo base_url('assets/css/nucleo-icons.css'); ?>" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- CSS Files -->
-  <link href="<?php echo base_url('assets/css/blk-design-system.css?v=1.0.0'); ?>" rel="stylesheet" />
+  <link href="<?php echo base_url('assets/login/css/bootstrap.min.css'); ?>" rel="stylesheet" />
+  <link href="<?php echo base_url('assets/login/css/now-ui-kit.css?v=1.3.0'); ?>" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="<?php echo base_url('assets/demo/demo.css'); ?>" rel="stylesheet" />
+  <link href="<?php echo base_url('assets/login/demo/demo.css'); ?>" rel="stylesheet" />
 </head>
 
-<body class="register-page">
+<body class="login-page sidebar-collapse">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
     <div class="container">
+      <div class="dropdown button-dropdown">
+        <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+          <span class="button-bar"></span>
+          <span class="button-bar"></span>
+          <span class="button-bar"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-header"></a>
+          <a class="dropdown-item" href="home">Home</a>
+          <!-- <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">One more separated link</a> -->
+        </div>
+      </div>
       <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/blk-design-system/index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-          <span>SPCP</span> <?php echo date('Y'); ?>
+        <a class="navbar-brand" href="#" rel="tooltip" title="Designed by TIM IT IPDN" data-placement="bottom" target="_blank">
+          Menu
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
+          <span class="navbar-toggler-bar top-bar"></span>
+          <span class="navbar-toggler-bar middle-bar"></span>
+          <span class="navbar-toggler-bar bottom-bar"></span>
         </button>
       </div>
-      <div class="collapse navbar-collapse justify-content-end" id="navigation">
-        <div class="navbar-collapse-header">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a>
-                SPCP•
-              </a>
-            </div>
-            <div class="col-6 collapse-close text-right">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="tim-icons icon-simple-remove"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="<?php echo base_url('assets/login/img/blurred-image-1.jpg'); ?>">
         <ul class="navbar-nav">
-          <li class="nav-item p-0">
+          <li class="nav-item">
+            <a class="nav-link" href="home">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/" target="_blank">
               <i class="fab fa-twitter"></i>
               <p class="d-lg-none d-xl-none">Twitter</p>
             </a>
           </li>
-          <li class="nav-item p-0">
+          <li class="nav-item">
             <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/" target="_blank">
               <i class="fab fa-facebook-square"></i>
               <p class="d-lg-none d-xl-none">Facebook</p>
             </a>
           </li>
-          <li class="nav-item p-0">
+          <li class="nav-item">
             <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/" target="_blank">
               <i class="fab fa-instagram"></i>
               <p class="d-lg-none d-xl-none">Instagram</p>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('home'); ?>">Home</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="wrapper">
-    <div class="page-header">
-      <div class="page-header-image"></div>
-      <div class="content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 col-md-6 offset-lg-0 offset-md-3">
-              <div id="square7" class="square square-7"></div>
-              <div id="square8" class="square square-8"></div>
-              <div class="card card-register">
-                <div class="card-header">
-                  <img class="card-img" src="<?php echo base_url('assets/img/square1.png'); ?>" alt="Card image">
-                  <h4 class="card-title">LOGIN</h4>
-                </div>
-                <div class="card-body">
-                    <form class="form">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                <i class="tim-icons icon-single-02"></i>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Nomor SPCP">
-                        </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                <i class="tim-icons icon-lock-circle"></i>
-                                </div>
-                            </div>
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <!-- <div class="form-check text-left">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox">
-                            <span class="form-check-sign"></span>
-                            I agree to the
-                            <a href="javascript:void(0)">terms and conditions</a>.
-                        </label>
-                        </div> -->
-                        <a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">Login</a>
-                    </form>
-                </div>
-                <div class="card-footer">
-                  
+  <div class="page-header clear-filter" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(https://mmc.tirto.id/image/2019/03/13/gedung-ipdn_ratio-16x9.jpg)"></div>
+    <div class="content">
+      <div class="container">
+        <div class="col-md-4 ml-auto mr-auto">
+          <div class="card card-login card-plain">
+            <form class="form" method="POST" action="">
+              <div class="card-header text-center">
+                <div class="logo-container">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" alt="">
                 </div>
               </div>
-            </div>
+              <div class="card-body">
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons users_circle-08"></i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="No SPCP">
+                </div>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                  <input type="password" placeholder="Password" class="form-control" />
+                </div>
+              </div>
+              <div class="card-footer text-center">
+                <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>                
+              </div>
+            </form>
           </div>
-          <div class="register-bg"></div>
-          <div id="square1" class="square square-1"></div>
-          <div id="square2" class="square square-2"></div>
-          <div id="square3" class="square square-3"></div>
-          <div id="square4" class="square square-4"></div>
-          <div id="square5" class="square square-5"></div>
-          <div id="square6" class="square square-6"></div>
         </div>
       </div>
     </div>
     <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <h1 class="title">SPCP•</h1>
-          </div>
-          <div class="col-md-3">
-            <ul class="nav">
-              <li class="nav-item">
-                <a href="<?php echo base_url('home'); ?>" class="nav-link">
-                  Home
-                </a>
-              </li>
-              
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="nav">
-              <li class="nav-item">
-                <a href="https://creative-tim.com/contact-us" class="nav-link">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <h3 class="title">Follow us:</h3>
-            <div class="btn-wrapper profile">
-              <a target="_blank" href="https://twitter.com/" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a target="_blank" href="https://www.facebook.com/" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
-                <i class="fab fa-facebook-square"></i>
-              </a>
-              <a target="_blank" href="https://dribbble.com/" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-                <i class="fab fa-dribbble"></i>
-              </a>
-            </div>
-          </div>
+      <div class=" container ">
+        
+        <div class="copyright" id="copyright">
+          &copy;
+          <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+          </script>, Designed by
+          <a href="https://scdb.ipdn.ac.id" target="_blank">TIM IT IPDN</a>.
         </div>
       </div>
     </footer>
   </div>
   <!--   Core JS Files   -->
-  <script src="<?php echo base_url('assets/js/core/jquery.min.js'); ?>" type="text/javascript"></script>
-  <script src="<?php echo base_url('assets/js/core/popper.min.js'); ?>" type="text/javascript"></script>
-  <script src="<?php echo base_url('assets/js/core/bootstrap.min.js'); ?>" type="text/javascript"></script>
-  <script src="<?php echo base_url('assets/js/plugins/perfect-scrollbar.jquery.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/login/js/core/jquery.min.js'); ?>" type="text/javascript"></script>
+  <script src="<?php echo base_url('assets/login/js/core/popper.min.js'); ?>" type="text/javascript"></script>
+  <script src="<?php echo base_url('assets/login/js/core/bootstrap.min.js'); ?>" type="text/javascript"></script>
   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-  <script src="<?php echo base_url('assets/js/plugins/bootstrap-switch.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/login/js/plugins/bootstrap-switch.js'); ?>"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="<?php echo base_url('assets/js/plugins/nouislider.min.js'); ?>" type="text/javascript"></script>
-  <!-- Chart JS -->
-  <script src="<?php echo base_url('assets/js/plugins/chartjs.min.js'); ?>"></script>
+  <script src="<?php echo base_url('assets/login/js/plugins/nouislider.min.js'); ?>" type="text/javascript"></script>
   <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-  <script src="<?php echo base_url('assets/js/plugins/moment.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/js/plugins/bootstrap-datetimepicker.js'); ?>" type="text/javascript"></script>
-  <!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <script src="<?php echo base_url('assets/demo/demo.js'); ?>"></script>
-  <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
-  <script src="<?php echo base_url('assets/js/blk-design-system.min.js?v=1.0.0'); ?>" type="text/javascript"></script>
+  <script src="<?php echo base_url('assets/login/js/plugins/bootstrap-datepicker.js'); ?>" type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+  <script src="<?php echo base_url('assets/login/js/now-ui-kit.js?v=1.3.0'); ?>" type="text/javascript"></script>
 </body>
 
 </html>

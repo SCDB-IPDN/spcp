@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('assets/img/apple-icon.png'); ?>">
-  <link rel="icon" type="image/png" href="<?php echo base_url('assets/img/favicon.png'); ?>">
+  <!-- <link rel="icon" type="image/png" href="<?php echo base_url('assets/img/favicon.png'); ?>"> -->
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/5/56/Lambang_IPDN.png">
   <title>
     SPCP• Home
   </title>
@@ -50,6 +51,9 @@
           </div>
         </div>
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('login'); ?>">Login</a>
+          </li>
           <li class="nav-item p-0">
             <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/" target="_blank">
               <i class="fab fa-twitter"></i>
@@ -67,9 +71,6 @@
               <i class="fab fa-instagram"></i>
               <p class="d-lg-none d-xl-none">Instagram</p>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('login'); ?>">Login</a>
           </li>
         </ul>
       </div>
