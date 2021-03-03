@@ -7,7 +7,7 @@
     Document Title
     =============================================
     -->
-    <title>Home</title>
+    <title>SPCP IPDN <?php echo date('Y'); ?></title>
     <!--  
     Favicons
     =============================================
