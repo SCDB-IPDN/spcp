@@ -91,14 +91,16 @@
                   <h4 class="card-title">LOGIN</h4>
                 </div>
                 <div class="card-body">
-                    <form class="form">
+                    <form class="form" action="<?php echo base_url(); ?>login/proses" method="POST">
+                    <!-- ACTION SAMA METHOD NYA JANGAN LUPA!! -->
+                    
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                 <i class="tim-icons icon-single-02"></i>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" placeholder="Nomor SPCP">
+                            <input type="text" name='nip' class="form-control" placeholder="Nomor SPCP">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -106,8 +108,10 @@
                                 <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" name='password' class="form-control" placeholder="Password">
                         </div>
+                        <!-- CEK BAGIAN NAME DI TAG INPUT NYA, NGELEMPAR APA DIA  -->
+
                         <!-- <div class="form-check text-left">
                         <label class="form-check-label">
                             <input class="form-check-input" type="checkbox">
@@ -116,7 +120,8 @@
                             <a href="javascript:void(0)">terms and conditions</a>.
                         </label>
                         </div> -->
-                        <a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">Login</a>
+                        <button type="submit" class="btn btn-success btn-block btn-lg">Login</button>
+                        <!-- <a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">Login</a> -->
                     </form>
                 </div>
                 <div class="card-footer">
