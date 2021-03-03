@@ -100,7 +100,7 @@
                       <i class="now-ui-icons users_circle-08"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="No SPCP">
+                  <input type="text" name="spcp" class="form-control" placeholder="No SPCP">
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -108,7 +108,7 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="password" placeholder="Password" class="form-control" />
+                  <input type="password" name="password" placeholder="Password" class="form-control" />
                 </div>
               </div>
               <div class="card-footer text-center">
