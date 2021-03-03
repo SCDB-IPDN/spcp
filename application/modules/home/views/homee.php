@@ -131,8 +131,6 @@
                   <p>Institut Pemerintahan Dalam Negeri (IPDN) Tahun <?php echo date('Y');?></p></center>
                 </div>
               </div>
-              <!-- <div class="col-sm-3">
-              </div> -->
               <div class="col-sm-3">
                 <h5 class="widget-title font-alt">HUBUNGI KAMI</h5>
                 <p>Jalan Ir. Soekarno KM 20
@@ -149,8 +147,6 @@
                 <div style="width: 100%">
                   <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=10%&amp;hl=en&amp;q=IPDN+(IPDN)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
               </div>
-              
-              
             </div>
           </div>
         </div>
