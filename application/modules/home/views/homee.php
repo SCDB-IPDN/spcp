@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url('assets/home/images/favicons/apple-icon-152x152.png');?>">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url('assets/home/images/favicons/apple-icon-180x180.png');?>">
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/5/56/Lambang_IPDN.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="<?php echo base_url('assets/home/images/favicons/manifest.json'); ?>">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo base_url('assets/home/images/favicons/ms-icon-144x144.png');?>">
     <meta name="theme-color" content="#ffffff">
@@ -42,8 +42,8 @@
     <link href="<?php echo base_url('assets/home/lib/components-font-awesome/css/font-awesome.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/home/lib/et-line-font/et-line-font.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/home/lib/flexslider/flexslider.css');?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/home/lib/owl.carousel/dist/assets/home/owl.carousel.min.css');?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/home/lib/owl.carousel/dist/assets/home/owl.theme.default.min.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/home/lib/owl.carousel/dist/assets/owl.carousel.min.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/home/lib/owl.carousel/dist/assets/owl.theme.default.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/home/lib/magnific-popup/dist/magnific-popup.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/home/lib/simple-text-rotator/simpletextrotator.css');?>" rel="stylesheet">
     <!-- Main stylesheet and color file-->
@@ -68,7 +68,7 @@
         </div>
       </nav>
       <section class="home-section home-full-height bg-dark-30" id="home" data-background="https://mmc.tirto.id/image/2019/03/13/gedung-ipdn_ratio-16x9.jpg">
-        <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=PryLSKvh95g&t', containment:'.home-section', startAt:18, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
+        <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=PryLSKvh95g&t', containment:'.home-section', startAt:271, stopAt:385, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
         <div class="video-controls-box">
           <div class="container">
             <div class="video-controls"><a class="fa fa-volume-up" id="video-volume" href="#">&nbsp;</a><a class="fa fa-pause" id="video-play" href="#">&nbsp;</a></div>
@@ -78,7 +78,7 @@
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="10%"></img>
-            <div class="font-alt mb-40 titan-title-size-4">CAPRA <?php echo date('Y'); ?></div><a class="section-scroll btn btn-primary  btn-round" href="login">Regitrasi Ulang</a>
+            <div class="font-alt mb-40 titan-title-size-4">CAPRA <?php echo date('Y'); ?></div><a class="section-scroll btn btn-primary  btn-round" href="login">Registrasi Ulang</a>
           </div>
         </div>
       </section>
@@ -181,7 +181,7 @@
     <script src="<?php echo base_url('assets/home/lib/imagesloaded/imagesloaded.pkgd.js');?>"></script>
     <script src="<?php echo base_url('assets/home/lib/flexslider/jquery.flexslider.js');?>"></script>
     <script src="<?php echo base_url('assets/home/lib/owl.carousel/dist/owl.carousel.min.js');?>"></script>
-    <script src="<?php echo base_url('assets/home/lib/smoothscroll.js');?>"></script>
+    <!-- <script src="<?php echo base_url('assets/home/lib/smoothscroll.js');?>"></script> -->
     <script src="<?php echo base_url('assets/home/lib/magnific-popup/dist/jquery.magnific-popup.js');?>"></script>
     <script src="<?php echo base_url('assets/home/lib/simple-text-rotator/jquery.simple-text-rotator.min.js');?>"></script>
     <script src="<?php echo base_url('assets/home/js/plugins.js');?>"></script>
