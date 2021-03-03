@@ -2,8 +2,7 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <!--  
     Document Title
     =============================================
@@ -125,14 +124,13 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <br>
                 <div class="widget">
                   <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="30%"></img>
                   <p>Institut Pemerintahan Dalam Negeri (IPDN) Tahun <?php echo date('Y');?></p></center>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <h5 class="widget-title font-alt">HUBUNGI KAMI</h5>
+              <div class="col-sm-6">
+                <h5 class="widget-title font-alt" style="color : blue;">HUBUNGI KAMI</h5>
                 <p>Jalan Ir. Soekarno KM 20
                 Desa Cibeusi, Jatinangor
                 Kabupaten Sumedang, Jawa Barat 45363</p>
@@ -142,11 +140,7 @@
                 Jam 09.00 s/d 15.00 WIB (Setiap Hari)</p>
                 <p>Email:<a href="#"> scdb.ipdn@gmail.com</a></p>
               </div>
-              <div class="col-sm-3">
-                <h5 class="widget-title font-alt">PETA IPDN</h5>
-                <div style="width: 100%">
-                  <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=10%&amp;hl=en&amp;q=IPDN+(IPDN)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -158,10 +152,7 @@
                 <p class="copyright font-alt">&copy; <?php echo date('Y'); ?>&nbsp;<a href="https://scdb.ipdn.ac.id">TIM IT IPDN</a></p>
               </div>
               <div class="col-sm-6">
-                <div class="footer-social-links">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
+                <p>Aplikasi optimal dijalankan dengan Browser <span style="color : red;">Mozilla Firefox </span><i class="fa fa-firefox"></i></p>
               </div>
             </div>
           </div>
