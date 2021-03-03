@@ -1,56 +1,31 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed ');
-// class login extends CI_Controller {
 
-//     public function __construct()
-//     {
-//         parent::__construct();
-//     }
+class login extends CI_Controller {
 
-//     public function index()
-// 	{
-//         $this->load->view('login'); 
-// 	}
-// }
-class Login extends CI_Controller {
-
-    public function __construct()
-    {
+    public function __construct(){
         parent::__construct();
         //load model
-        $this->load->model('user_model');
+        $this->load->model('login_model');
     }
 
-    public function index()
-	{
-		// if($this->session->userdata('nip') == NULL)
-		// {
-			$this->load->view('login');
-		// }else{
-			// redirect('login');
-		// }
-		// di halaman login, gk usah cek apa2
-		// jangan lupa cek view juga, lempar apa
+    public function index(){
+		$this->load->view('login');
 	}
  
-	public function proses()
-	{
-		$nip = $this->input->post('nip', TRUE);
+	public function proses(){
+		$spcp = $this->input->post('spcp', TRUE);
         $password = MD5($this->input->post('password', TRUE));
 		
-		if($this->user_model->login_user($nip,$password))
-		{
+		if($this->user_model->login_user($spcp,$password)){
 			redirect('profile');
-		}
-		else
-		{
-			$this->session->set_flashdata('error','NIP ATAU PASSWORD SALAH !!!');
+		}else{
+			$this->session->set_flashdata('error','SPCP ATAU PASSWORD SALAH !!!');
 			redirect('login');
 		}
     }
     
-    public function logout()
-	{
+    public function logout(){
 		$this->session->unset_userdata('nip');
 		$this->session->unset_userdata('nama');
 		$this->session->unset_userdata('is_login');
