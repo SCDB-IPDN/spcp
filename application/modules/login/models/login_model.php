@@ -13,7 +13,6 @@ class login_model extends CI_Model {
             if(!empty($result)){
                 $this->session->set_userdata('spcp',$spcp);
                 $this->session->set_userdata('nama',$data_user->nama_user);
-                $this->session->set_userdata('image_url',$data_user->image_url);
                 $this->session->set_userdata('is_login',TRUE);
 
                 return TRUE;

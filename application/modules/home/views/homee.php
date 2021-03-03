@@ -78,7 +78,7 @@
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="10%"></img>
-            <div class="font-alt mb-40 titan-title-size-4">CAPRA <?php echo date('Y'); ?></div><a class="section-scroll btn btn-border-w btn-round" href="login">Regitrasi Ulang</a>
+            <div class="font-alt mb-40 titan-title-size-4">CAPRA <?php echo date('Y'); ?></div><a class="section-scroll btn btn-primary  btn-round" href="login">Regitrasi Ulang</a>
           </div>
         </div>
       </section>
@@ -105,11 +105,7 @@
               </div>
               <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
                 <div class="alt-services-image align-center">
-                  <img src="https://spcp.ipdn.ac.id/2020/assets/upload/media/img1.jpeg" alt="Feature Image">
-                  <hr>
-                  <img src="https://spcp.ipdn.ac.id/2020/assets/upload/media/img3.jpg" alt="Feature Image">
-                  <hr>
-                  <img src="https://spcp.ipdn.ac.id/2020/assets/upload/media/img4.jpg" alt="Feature Image">
+                  <img src="<?php echo base_url('assets/home/images/spcp.jpg');?>" alt="Feature Image">
                 </div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
@@ -169,7 +165,6 @@
                 <div class="footer-social-links">
                   <a href="#"><i class="fa fa-facebook"></i></a>
                   <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-skype"></i></a>
                 </div>
               </div>
             </div>
