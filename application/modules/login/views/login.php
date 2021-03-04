@@ -15,7 +15,8 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <!-- CSS Files -->
   <link href="<?php echo base_url('assets/login/css/bootstrap.min.css'); ?>" rel="stylesheet" />
   <link href="<?php echo base_url('assets/login/css/now-ui-kit.css?v=1.3.0'); ?>" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -35,12 +36,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-header"></a>
           <a class="dropdown-item" href="home">Home</a>
-          <!-- <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">One more separated link</a> -->
         </div>
       </div>
       <div class="navbar-translate">
@@ -87,12 +82,13 @@
       <div class="container">
         <div class="col-md-4 ml-auto mr-auto">
           <div class="card card-login card-plain">
-            <form class="form" method="POST" action="">
+            <form class="form" method="POST" action="login/proses">
               <div class="card-header text-center">
-                <div class="logo-container">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" alt="">
-                </div>
+                <!-- <div class="logo-container"> -->
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="50%" alt="">
+                <!-- </div> -->
               </div>
+              <p>LOGIN MENGGUNAKAN NOMOR SPCP <?= date('Y')?></p>
               <div class="card-body">
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -100,19 +96,21 @@
                       <i class="now-ui-icons users_circle-08"></i>
                     </span>
                   </div>
-                  <input type="text" name="spcp" class="form-control" placeholder="No SPCP">
+                  <input type="text" name="spcp" class="form-control" placeholder="Masukkan no spcp">
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="now-ui-icons text_caps-small"></i>
+                      <i class="fa fa-key"></i>
                     </span>
                   </div>
-                  <input type="password" name="password" placeholder="Password" class="form-control" />
+                  <input type="password" name="password" placeholder="Masukkan password" class="form-control" />
                 </div>
-              </div>
-              <div class="card-footer text-center">
-                <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>                
+                <p><b><?php echo $this->session->flashdata('login') ?></b></p>  
+                Lupa Password ? <a href="https://api.whatsapp.com/send?phone=6287804813232&text=Izin Bertanya Ibu Hasna" target="_blank">Hubungi Kami</a>
+                <div class="card-footer text-center">
+                  <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>                
+                </div>
               </div>
             </form>
           </div>

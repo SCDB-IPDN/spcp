@@ -17,10 +17,9 @@ class login extends CI_Controller {
 		$spcp = $this->input->post('spcp', TRUE);
         $password = MD5($this->input->post('password', TRUE));
 		
-		if($this->user_model->login_user($spcp,$password)){
+		if($this->login_model->login_user($spcp,$password)){
 			redirect('profile');
 		}else{
-			$this->session->set_flashdata('error','SPCP ATAU PASSWORD SALAH !!!');
 			redirect('login');
 		}
     }
@@ -29,8 +28,6 @@ class login extends CI_Controller {
 		$this->session->unset_userdata('nip');
 		$this->session->unset_userdata('nama');
 		$this->session->unset_userdata('is_login');
-		$this->session->unset_userdata('image_url');
-		$this->session->unset_userdata('dosen');
 		redirect('home');
 	}
 }

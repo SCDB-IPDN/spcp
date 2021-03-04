@@ -20,25 +20,13 @@
 </head>
 
 <body class="">
- 
   <div class="main-content">
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="profile">SPCP <?php echo date('Y'); ?></a>
-        <!-- Form -->
-        <!-- <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-          <div class="form-group mb-0">
-            <div class="input-group input-group-alternative">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-              </div>
-              <input class="form-control" placeholder="Search" type="text">
-            </div>
-          </div>
-        </form> -->
-        <!-- User -->
+  
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,7 +35,7 @@
                   <img alt="Image placeholder" src="https://meetanentrepreneur.lu/wp-content/uploads/2019/08/profil-linkedin-300x300.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Hasna</span>
+                  <span class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('nama') ?></span>
                 </div>
               </div>
             </a>
@@ -74,7 +62,7 @@
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello Hasna</h1>
+            <h1 class="display-2 text-white">Hello <?= $this->session->userdata('nama').' '.$this->session->flashdata('login') ?></h1>
             <p class="text-white mt-0 mb-5">Silahkan Mengisi Form Regitrasi Ulang</p>
           </div>
         </div>
@@ -106,10 +94,10 @@
                 </div>
               </div>
               <div class="text-center">
-                <h3>
-                  Hasna
-                </h3>
-                <p>No SPCP YA !!!!</p>
+                <h2>
+                  <?= $this->session->userdata('nama') ?>
+                </h2>
+                <h5><b><?= $this->session->userdata('spcp') ?></b></h5>
               </div>
             </div>
           </div>
@@ -119,7 +107,7 @@
             <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Form Regitrasi Ulang</h3>
+                  <h3 class="mb-0">Form Regitrasi Ulang CAPRA <?= date('Y') ?></h3>
                 </div>
               </div>
             </div>
