@@ -61,13 +61,13 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="login">Login</a></li>
+              <li><a href="login" class="btn btn-sm btn-warning btn-round">Login</a></li>
             </ul>
           </div>
         </div>
       </nav>
       <section class="home-section home-full-height bg-dark-30" id="home" data-background="https://mmc.tirto.id/image/2019/03/13/gedung-ipdn_ratio-16x9.jpg">
-        <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=PryLSKvh95g&t', containment:'.home-section', startAt:271, stopAt:385, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
+        <div class="video-player" data-property="{videoURL:'<?= $link_video->link ?>', containment:'.home-section', startAt:<?= $link_video->start ?>, <?= $link_video->stop != NULL ? "stopAt:$link_video->stop," : "" ?> mute:<?= $link_video->mute ?>, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
         <div class="video-controls-box">
           <div class="container">
             <div class="video-controls"><a class="fa fa-volume-up" id="video-volume" href="#">&nbsp;</a><a class="fa fa-pause" id="video-play" href="#">&nbsp;</a></div>
