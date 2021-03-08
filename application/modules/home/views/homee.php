@@ -82,7 +82,7 @@
         <div class="titan-caption">
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="10%"></img>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="15%"></img>
             <?php if(date('m') >= '08') { ?>
             <div class="font-alt mb-40 titan-title-size-4">CAPRA <?php echo date('Y'); ?></div><a class="section-scroll btn btn-primary  btn-round" href="login">Registrasi Ulang</a>
             <?php } ?>
@@ -437,7 +437,7 @@
     <script src="<?php echo base_url('assets/home/lib/imagesloaded/imagesloaded.pkgd.js');?>"></script>
     <script src="<?php echo base_url('assets/home/lib/flexslider/jquery.flexslider.js');?>"></script>
     <script src="<?php echo base_url('assets/home/lib/owl.carousel/dist/owl.carousel.min.js');?>"></script>
-    <!-- <script src="<?php echo base_url('assets/home/lib/smoothscroll.js');?>"></script> -->
+    <script src="<?php echo base_url('assets/home/lib/smoothscroll.js');?>"></script>
     <script src="<?php echo base_url('assets/home/lib/magnific-popup/dist/jquery.magnific-popup.js');?>"></script>
     <script src="<?php echo base_url('assets/home/lib/simple-text-rotator/jquery.simple-text-rotator.min.js');?>"></script>
     <script src="<?php echo base_url('assets/home/js/plugins.js');?>"></script>
