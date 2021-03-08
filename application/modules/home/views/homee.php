@@ -53,9 +53,11 @@
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
+      
       <div class="page-loader">
         <div class="loader">Loading...</div>
       </div>
+      
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -63,13 +65,14 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <?php if(date('m') >= '09') { ?>
+              <?php if(date('m') >= '08') { ?>
               <li><a href="login" class="btn btn-sm btn-warning btn-round">Login</a></li>
               <?php } ?>
             </ul>
           </div>
         </div>
       </nav>
+
       <section class="home-section home-full-height bg-dark-30" id="home" data-background="https://mmc.tirto.id/image/2019/03/13/gedung-ipdn_ratio-16x9.jpg">
         <div class="video-player" data-property="{videoURL:'<?= $link_video->link ?>', containment:'.home-section', startAt:<?= $link_video->start ?>, <?= $link_video->stop != NULL ? "stopAt:$link_video->stop," : "" ?> mute:<?= $link_video->mute ?>, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
         <div class="video-controls-box">
@@ -81,13 +84,14 @@
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="10%"></img>
-            <?php if(date('m') >= '09') { ?>
+            <?php if(date('m') >= '08') { ?>
             <div class="font-alt mb-40 titan-title-size-4">CAPRA <?php echo date('Y'); ?></div><a class="section-scroll btn btn-primary  btn-round" href="login">Registrasi Ulang</a>
             <?php } ?>
           </div>
         </div>
       </section>
 
+      <!-- content -->
       <div class="main"> 
         <section class="module" id="alt-features">
           <div class="container mt-5 wow bounceInRight">
@@ -146,8 +150,8 @@
               </div>
             </div>
           </section>
+          <br>
           <div class="container">
-            
             <div class="col-lg-3">
               <div class="card">
                   <div class="face face1">
