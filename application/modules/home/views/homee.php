@@ -47,7 +47,7 @@
     <!-- Main stylesheet and color file-->
     <link href="<?php echo base_url('assets/home/css/style.css');?>" rel="stylesheet">
     <link id="color-scheme" href="<?php echo base_url('assets/home/css/colors/default.css');?>" rel="stylesheet">
-    <link id="color-scheme" href="<?php echo base_url('assets/home/css/custom.css');?>" rel="stylesheet">
+    <link id="color-scheme" href="<?php echo base_url('assets/home/css/apa.css');?>" rel="stylesheet">
   </head>
   
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -113,7 +113,7 @@
               </div>
               <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
                 <div class="alt-services-image align-center">
-                  <img src="<?php echo base_url('assets/home/images/spcp.jpg');?>" alt="Feature Image">
+                  <img src="<?php echo base_url('assets/home/images/spcp.jpeg');?>" alt="Feature Image">
                 </div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
