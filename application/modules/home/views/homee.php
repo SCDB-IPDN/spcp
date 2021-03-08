@@ -403,7 +403,7 @@
                 <p>
                 Melayani mulai :
                 Jam 09.00 s/d 15.00 WIB (Setiap Hari)</p>
-                <p>Email:<a href="#"> scdb.ipdn@gmail.com</a></p>
+                <p>Email :<a href="#"> scdb.ipdn@gmail.com</a></p>
               </div>
               
             </div>
