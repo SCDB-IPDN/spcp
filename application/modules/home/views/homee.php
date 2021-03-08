@@ -179,6 +179,7 @@
                   </div>
                   <div class="face face2">
                       <div class="content">
+                          <h4><b>Tes Kesehatan Tahap I</b></h4>
                           <p>Pelaksanaan Tes Kesehatan Tahap I di Rumah Sakit Bhayangkara/Biddokkes POLDA</p>
                           <a href="https://spcp.ipdn.ac.id" target="_blank">Selengkapnya</a>
                       </div>
@@ -195,6 +196,7 @@
                   </div>
                   <div class="face face2">
                       <div class="content">
+                        <h4><b>Tes Psikologi Integritas dan Kejujuran</b></h4>
                         <p>Pelaksanaan Tes Psikologi, Integritas dan Kejujuran oleh Biro SDM Polda</p>
                         <a href="https://spcp.ipdn.ac.id" target="_blank">Selengkapnya</a>
                       </div>
@@ -412,10 +414,10 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; <?php echo date('Y'); ?>&nbsp;<a href="https://scdb.ipdn.ac.id">TIM IT IPDN</a></p>
+                <p class="copyright font-alt">&copy; <?php echo date('Y'); ?>&nbsp;<a href="https://scdb.ipdn.ac.id"><b>TIM IT IPDN</b></a></p>
               </div>
               <div class="col-sm-6">
-                <p>Aplikasi optimal dijalankan dengan Browser <span style="color : red;">Mozilla Firefox </span><i class="fa fa-firefox"></i></p>
+                <p>Aplikasi optimal dijalankan dengan Browser <span style="color : black;"><b>Mozilla Firefox</b> </span><i class="fa fa-firefox"></i></p>
               </div>
             </div>
           </div>
