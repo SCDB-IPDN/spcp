@@ -7,7 +7,7 @@
     Document Title
     =============================================
     -->
-    <title>SPCP IPDN <?php echo date('Y'); ?></title>
+    <title>CAPRA IPDN <?php echo date('Y'); ?></title>
     <!--  
     Favicons
     =============================================
@@ -48,6 +48,9 @@
     <link href="<?php echo base_url('assets/home/css/style.css');?>" rel="stylesheet">
     <link id="color-scheme" href="<?php echo base_url('assets/home/css/colors/default.css');?>" rel="stylesheet">
     <link id="color-scheme" href="<?php echo base_url('assets/home/css/apa.css');?>" rel="stylesheet">
+
+    <!-- icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -60,7 +63,7 @@
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://spcp.ipdn.ac.id" target="_blank">SPCP <?php echo date('Y');?></a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://spcp.ipdn.ac.id" target="_blank">CAPRA <?php echo date('Y');?></a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -96,7 +99,7 @@
           <div class="container mt-5 wow bounceInRight">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Tentang SPCP IPDN</h2>
+                <h2 class="module-title font-alt">Tentang CPRA IPDN</h2>
                 <div class="module-subtitle font-serif">Selamat Datang Calon Praja IPDN.</div>
               </div>
             </div>
@@ -142,7 +145,7 @@
               </div>
               <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
-                  <h2 class="module-title font-alt mb-0">Seleksi Penerimaan Calon Praja (SPCP) IPDN <?= date('Y'); ?></h2>
+                  <h2 class="module-title font-alt mb-0">Seleksi Penerimaan Calon Praja IPDN TAHUN <?= date('Y'); ?></h2>
                   <br>
                   <p class="text-justify wow fadeInLeft">Setelah Proses Pendaftaran dan Verifikasi yang dilakukan di Portal SSCASN DIKDIN, untuk menjadi Calon Praja IPDN, para calon peserta diwajibkan untuk mengikuti semua tahapan tes yang akan diujikan. Jika para pendaftar/peserta di tiap tes nya sampai dengan tes akhir memenuhi persyaratan yang telah ditetapkan maka dapat dinyatakan lulus sebagai calon praja IPDN. Begitu pula sebaliknya jika salah satu item Tahapan Tes Yang diujikan ada yang GAGAL/GUGUR atau Tidak Memenuhi Syarat maka dinyatakan GAGAL karena sistem tahapan tes yang dilakukan IPDN dalam Seleksi Penerimaan Calon Praja (SPCP) baru menggunakan sistem GUGUR.</p>
                 </div>
@@ -391,21 +394,24 @@
               <div class="col-sm-6">
                 <div class="widget">
                   <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="30%"></img>
-                  <p>Institut Pemerintahan Dalam Negeri (IPDN) Tahun <?php echo date('Y');?></p></center>
+                  <p style="font-size: 14px;">INSTITUT PEMERINTAHAN DALAM NEGERI</p>
+                  </center>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <h5 class="widget-title font-alt" style="color : blue;">HUBUNGI KAMI</h5>
-                <p>Jalan Ir. Soekarno KM 20
+              <div class="col-sm-3">
+                <h5 class="widget-title font-alt" style="color : white;">TENTANG IPDN</h5>
+                <a href="ipdn.ipdn.ac.id" target="_blank">Institut Pemerintahan Dalam Negeri</a>
+                <p><a href="scdb.ipdn.ac.id" target="_blank">Smart Campus Database IPDN</a></p>
+              </div>
+              <div class="col-sm-3">
+                <h5 class="widget-title font-alt" style="color : white;">CONTACT</h5>
+                <p class="text-justify">Jalan Ir. Soekarno KM 20
                 Desa Cibeusi, Jatinangor
                 Kabupaten Sumedang, Jawa Barat 45363</p>
-                <p>Contact Center : 0-804-1-700-700</p>
-                <p>
-                Melayani mulai :
-                Jam 09.00 s/d 15.00 WIB (Setiap Hari)</p>
-                <p>Email :<a href="#"> scdb.ipdn@gmail.com</a></p>
+                <p><i class="fa fa-envelope" style="font-size: 16px;"></i> <a href="#"> scdb.ipdn@gmail.com</a></p>
+                <p><i class="fa fa-phone" style="font-size: 16px;"></i> 0-804-1-700-700</p>
+                <p><i class="fa fa-clock-o" style="font-size: 16px;"></i> 09.00 s/d 15.00 WIB (Setiap Hari)</p>
               </div>
-              
             </div>
           </div>
         </div>
@@ -417,7 +423,7 @@
                 <p class="copyright font-alt">&copy; <?php echo date('Y'); ?>&nbsp;<a href="https://scdb.ipdn.ac.id"><b>TIM IT IPDN</b></a></p>
               </div>
               <div class="col-sm-6">
-                <p>Aplikasi optimal dijalankan dengan Browser <span style="color : black;"><b>Mozilla Firefox</b> </span><i class="fa fa-firefox"></i></p>
+                <p>Aplikasi optimal dijalankan dengan Browser <a href="https://www.mozilla.org/id/firefox/new/" target="_blank"><span style="color : black;"><b>Mozilla Firefox</b> </span></a><i class="fa fa-firefox"></i></p>
               </div>
             </div>
           </div>
