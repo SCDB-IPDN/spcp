@@ -1,5 +1,5 @@
 <?php
-class login_model extends CI_Model {
+class Login_model extends CI_Model {
 
     function login_user($spcp,$password){
         $query = $this->db->get_where('tbl_users_spcp',array('spcp'=>$spcp));

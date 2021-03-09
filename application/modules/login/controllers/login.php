@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed ');
 
-class login extends CI_Controller {
+class Login extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
         //load model
-        $this->load->model('login_model');
+        $this->load->model('Login_model');
     }
 
     public function index(){
@@ -17,7 +17,7 @@ class login extends CI_Controller {
 		$spcp = $this->input->post('spcp', TRUE);
         $password = MD5($this->input->post('password', TRUE));
 		
-		if($this->login_model->login_user($spcp,$password)){
+		if($this->Login_model->login_user($spcp,$password)){
 			redirect('profile');
 		}else{
 			redirect('login');
