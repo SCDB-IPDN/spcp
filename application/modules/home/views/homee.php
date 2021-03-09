@@ -400,8 +400,8 @@
               </div>
               <div class="col-sm-3">
                 <h5 class="widget-title font-alt" style="color : white;">TENTANG IPDN</h5>
-                <a href="ipdn.ipdn.ac.id" target="_blank">Institut Pemerintahan Dalam Negeri</a>
-                <p><a href="scdb.ipdn.ac.id" target="_blank">Smart Campus Database IPDN</a></p>
+                <a href="https://ipdn.ac.id" target="_blank">Institut Pemerintahan Dalam Negeri</a>
+                <p><a href="https://scdb.ipdn.ac.id" target="_blank">Smart Campus Database IPDN</a></p>
               </div>
               <div class="col-sm-3">
                 <h5 class="widget-title font-alt" style="color : white;">CONTACT</h5>
