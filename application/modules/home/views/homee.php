@@ -263,7 +263,7 @@
                         <tr>
                             <td class="text-center"> 1. </td>
                             <td>Pelamar mendaftar secara online/daring Calon Peserta mengakses ke portal SSCASN BKN. </td>
-                            <td rowspan="5" class="align-middle">April <?= date('Y') ?></td>
+                            <td rowspan="5" class="align-middle">1-30 April <?= date('Y') ?></td>
                             <td rowspan="5" class="align-middle">Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a></td>
                         </tr>
                         <tr>
@@ -285,20 +285,20 @@
                         <tr>
                             <td class="text-center">6.</td>
                             <td>Verifikasi dokumen persyaratan administrasi pendaftaran yang telah diunggah.</td>
-                            <td>April - Mei <?= date('Y') ?></td>
+                            <td>2 April - 3 Mei <?= date('Y') ?></td>
                             <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a></td>
                         </tr>
                         <tr>
                             <td class="text-center">7.</td>
                             <td>Pengumuman verifikasi dokumen persyaratan administrasi pendaftaran.</td>
-                            <td>Mei <?= date('Y') ?></td>
-                            <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a></td>
+                            <td>4 Mei <?= date('Y') ?></td>
+                            <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a> dan Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                         </tr>
                         <tr>
                             <td class="text-center">8.</td>
                             <td>Pelamar yang memenuhi syarat verifikasi dokumen persyaratan administrasi pendaftaran melakukan pembayaran PNBP Seleksi Kompetensi Dasar (SKD) sesuai kode billing.</td>
                             <td>Mei -Juni <?= date('Y') ?></td>
-                            <td>Bank yang ditunjuk oleh BKN (Maksimal Pembayaran PNBP SKD 7 (tujuh) hari kerja</td>
+                            <td>Bank yang ditunjuk oleh BKN</td>
                         </tr>
                         <tr>
                             <td class="text-center">9.</td>
@@ -310,7 +310,7 @@
                             <td class="text-center">10.</td>
                             <td>Pengumuman Peserta SKD.</td>
                             <td>Juni <?= date('Y') ?></td>
-                            <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a> dan Laman <a href="https://spcp.ipdn.ac.id/" target="_blank">https://spcp.ipdn.ac.id</a></td>
+                            <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a> dan Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                         </tr>
                         <tr>
                             <td class="text-center">11.</td>
@@ -322,7 +322,7 @@
                             <td class="text-center">12.</td>
                             <td>Pengumuman Hasil SKD.</td>
                             <td>Juli <?= date('Y') ?></td>
-                            <td>Laman <a href="https://dikdin.bkn.go.id" target="_blank">https://dikdin.bkn.go.id</a><br>dan Laman <a href="https://spcp.ipdn.ac.id" target="_blank">https://spcp.ipdn.ac.id</a></td>
+                            <td>Laman <a href="https://dikdin.bkn.go.id" target="_blank">https://dikdin.bkn.go.id</a><br>dan Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                         </tr>
                         <tr>
                             <td class="text-center">13.</td>
@@ -334,7 +334,7 @@
                             <td class="text-center">14.</td>
                             <td>Pengumuman Hasil Tes Kesehatan Tahap I.</td>
                             <td>Juli - Agustus <?= date('Y') ?></td>
-                            <td>Laman <a href="https://spcp.ipdn.ac.id" target="_blank">https://spcp.ipdn.ac.id</a></td>
+                            <td>Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                         </tr>
                         <tr>
                             <td class="text-center">15.</td>
@@ -346,7 +346,7 @@
                             <td class="text-center">16.</td>
                             <td>Pengumuman Hasil Tes Psikologi, Integritas dan Kejujuran</td>
                             <td>Juli - Agustus <?= date('Y') ?></td>
-                            <td>Laman <a href="https://spcp.ipdn.ac.id" target="_blank">https://spcp.ipdn.ac.id</a></td>
+                            <td>Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                         </tr>
                         <tr>
                             <td class="text-center">17.</td>
@@ -361,7 +361,7 @@
                             <td>Agustus <?= date('Y') ?></td>
                             <td>
                               <ul>
-                                <li><a href="https://spcp.ipdn.ac.id" target="_blank">https://spcp.ipdn.ac.id</a></li>
+                                <li><a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></li>
                                 <li>Rumah Sakit Bhayangkara/Biddokes</li>
                                 <li>Biro SDM Polda/Stadion Olahraga</li>
                               </ul>
@@ -371,7 +371,7 @@
                             <td class="text-center">18.</td>
                             <td>Pengumuman Hasil Pantukhir</td>
                             <td>Agustus <?= date('Y') ?></td>
-                            <td>Laman <a href="https://dikdin.bkn.go.id" target="_blank">https://dikdin.bkn.go.id</a><br>dan Laman <a href="https://spcp.ipdn.ac.id/2020/" target="_blank">https://spcp.ipdn.ac.id</a></td>
+                            <td>Laman <a href="https://dikdin.bkn.go.id" target="_blank">https://dikdin.bkn.go.id</a><br>dan Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                         </tr>
                         <tr>
                             <td class="text-center">19.</td>
