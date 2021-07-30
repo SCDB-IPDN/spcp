@@ -26,7 +26,7 @@
       <div class="container-fluid">
         <!-- Brand -->
         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="profile">SPCP <?php echo date('Y'); ?></a>
-  
+
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,7 +44,7 @@
                 <h6 class="text-overflow m-0">Welcome!</h6>
               </div>
               <div class="dropdown-divider"></div>
-              <a href="<?php echo base_url('login/logout');?>" class="dropdown-item">
+              <a href="<?php echo base_url('login/logout'); ?>" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>
@@ -62,8 +62,10 @@
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello <?= $this->session->userdata('nama').' '.$this->session->flashdata('login') ?></h1>
+            <h1 class="display-2 text-white">Hello <?php echo $data->nama . ' ' . $this->session->flashdata('login') ?></h1>
             <p class="text-white mt-0 mb-5">Silahkan Mengisi Form Regitrasi Ulang</p>
+
+
           </div>
         </div>
       </div>
@@ -95,7 +97,7 @@
               </div>
               <div class="text-center">
                 <h2>
-                  <?= $this->session->userdata('nama') ?>
+                  <?php echo $data->nama ?>
                 </h2>
                 <h5><b><?= $this->session->userdata('spcp') ?></b></h5>
               </div>
@@ -109,88 +111,607 @@
                 <div class="col-8">
                   <h3 class="mb-0">Form Regitrasi Ulang CAPRA <?= date('Y') ?></h3>
                 </div>
+                <br>
+
               </div>
             </div>
+
             <div class="card-body">
-              <form>
-                <h6 class="heading-small text-muted mb-4">User information</h6>
+              <form method="post" action="<?php echo base_url('profile/edit'); ?>">
+
+                <?php if ($this->session->flashdata('notif') != NULL) { ?>
+                  <div class="alert alert-<?php echo $this->session->flashdata('notif')[0] ?> alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong><i class="fa fa-info-circle"></i></strong> <?php echo $this->session->flashdata('notif')[1] ?>
+                  </div>
+                <?php } ?>
+                <h6 class="heading-small text-muted mb-4">Data Pribadi</h6>
                 <div class="pl-lg-4">
                   <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
+                        <label class="form-control-label" for="input-username">No SPCP</label>
+                        <input type="text" name="no_spcp" id="no_spcp" class="form-control form-control-alternative" placeholder="No SPCP .." value="<?php echo $data->no_spcp ?>">
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                        <label class="form-control-label" for="input-username">Nama</label>
+                        <input type="text" name="nama" id="nama" class="form-control form-control-alternative" placeholder="Nama Lengkap .." value="<?php echo $data->nama ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Jenis Kelamin</label>
+
+                        <select name="jk" id="jk" class="form-control">
+                          <option value="" disabled>-Pilih Jenis Kelamin-</option>
+                          <option value="L" <?php if ($data->jk == "L") {
+                                              echo "selected";
+                                            } ?>>Laki-Laki</option>
+                          <option value="P" <?php if ($data->jk == "P") {
+                                              echo "selected";
+                                            } ?>>Perempuan</option>
+                          <!-- <option value="L">Laki-Laki</option>
+                          <option value="P">Perempuan</option> -->
+                        </select>
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-username">NISN</label>
+                        <input type="text" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>">
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
+                        <label class="form-control-label" for="input-email">NIK </label>
+                        <input type="text" name="nik_praja" id="nik_praja" class="form-control form-control-alternative" placeholder="NIK .." value="<?php echo $data->nik_praja ?>">
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
+                        <label class="form-control-label" for="input-email">NPWP</label>
+                        <input type="text" name="npwp" id="npwp" class="form-control form-control-alternative" placeholder="NPWP .." value="<?php echo $data->npwp ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-first-name">Tempat Lahir</label>
+                        <input type="text" name="tmpt_lahir" id="tmpt_lahir" class="form-control form-control-alternative" placeholder="Tempat Lahir .." value="<?php echo $data->tmpt_lahir ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">Tanggal Lahir</label>
+                        <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control form-control-alternative" placeholder="Tanggal Lahir .." value="<?php echo $data->tgl_lahir ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Agama</label>
+
+
+                        <select name="agama" id="agama" class="form-control">
+                          <option value="" disabled>-Pilih Agama-</option>
+                          <?php foreach ($agamaa as $x) { ?>
+                            <option value="<?php echo $x->id_agama ?>" <?php if ($data->agama == $x->id_agama) {
+                                                                          echo "selected";
+                                                                        } ?>><?php echo $x->nama_agama ?></option>
+                          <?php } ?>
+                        </select>
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">No TLP</label>
+                        <input type="number" name="tlp_rumah" id="tlp_rumah" class="form-control form-control-alternative" placeholder="No Tlp .." value="<?php echo $data->tlp_rumah ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">No HP</label>
+                        <input type="number" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>">
                       </div>
                     </div>
                   </div>
+
                 </div>
                 <hr class="my-4" />
                 <!-- Address -->
-                <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                <h6 class="heading-small text-muted mb-4">Informasi Alamat</h6>
                 <div class="pl-lg-4">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-4">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-address">Address</label>
-                        <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                        <label class="form-control-label" for="input-last-name">Alamat</label>
+                        <!-- <textarea class="form-control form-control-alternative" name="alamat" id="alamat" rows="" cols="50" value="<?php echo $data->alamat ?>"> </textarea> -->
+                        <input type="text" name="alamat" id="alamat" class="form-control form-control-alternative" placeholder="Alamat  .." value="<?php echo $data->alamat ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-1">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">RT</label>
+                        <input type="text" name="rt" id="rt" class="form-control form-control-alternative" placeholder="RT .." value="<?php echo $data->rt ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-1">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">RW</label>
+                        <input type="text" name="rw" id="rw" class="form-control form-control-alternative" placeholder="RW .." value="<?php echo $data->rw ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">Provinsi </label>
+                        <select name="provinsi" id="provinsi" class="form-control">
+                          <option value="" disabled>-Pilih Provinsi-</option>
+                          <?php foreach ($wilayah as $x) { ?>
+                            <option value="<?php echo $x->nama_provinsi ?>" <?php if ($data->provinsi == $x->nama_provinsi) {
+                                                                              echo "selected";
+                                                                            } ?>><?php echo $x->nama_provinsi ?></option>
+                            <!-- <option value="<?php echo $x->nama_provinsi; ?>"><?php echo $x->nama_provinsi; ?></option> -->
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">Kabupaten/Kota</label>
+                        <select name="kab_kota" id="kab_kota" class="form-control">
+                          <option value="" disabled>-Pilih Kab/Kota-</option>
+                          <option value="<?php echo $data->kab_kota ?>" selected> <?php echo $data->kab_kota ?></option>
+                        </select>
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-city">City</label>
-                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
+                        <label class="form-control-label">Kecamatan</label>
+                        <select name="kecamatan" id="kecamatan" class="form-control">
+                          <option value="" disabled>-Pilih Kecamatan-</option>
+                          <option value="<?php echo $data->id_kecamatan ?>" selected> <?php echo $data->nama_kecamatan ?></option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">Nama Dusun</label>
+                        <input type="text" name="nama_dusun" id="nama_dusun" class="form-control form-control-alternative" placeholder="Nama Dusun .." value="<?php echo $data->nama_dusun ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">Kelurahan</label>
+                        <input type="text" name="kelurahan" id="kelurahan" class="form-control form-control-alternative" placeholder="Kelurahan .." value="<?php echo $data->kelurahan ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-last-name">Kode Pos</label>
+                        <input type="text" name="kode_pos" id="kode_pos" class="form-control form-control-alternative" placeholder="Kode Pos .." value="<?php echo $data->kode_pos ?>">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <hr class="my-4" />
+                <!-- Description -->
+                <h6 class="heading-small text-muted mb-4">Data Lembaga</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Jenis Tinggal</label>
+                        <select name="jenis_tinggal" id="jenis_tinggal" class="form-control">
+                          <option value="" disabled>-Pilih Jenis Tinggal-</option>
+                          <?php foreach ($jenistinggal as $x) { ?>
+
+                            <option value="<?php echo $x->id_jenis_tinggal ?>" <?php if ($data->jenis_tinggal == $x->id_jenis_tinggal) {
+                                                                                  echo "selected";
+                                                                                } ?>><?php echo $x->nama_jenis_tinggal ?></option>
+
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Alat Transportasi</label>
+                        <select name="alat_transport" id="alat_transport" class="form-control">
+                          <option value="" disabled>-Pilih Alat Transportasi-</option>
+                          <?php foreach ($alattransportasi as $x) { ?>
+
+                            <option value="<?php echo $x->id_alat_transportasi ?>" <?php if ($data->alat_transport == $x->id_alat_transportasi) {
+                                                                                      echo "selected";
+                                                                                    } ?>><?php echo $x->nama_alat_transportasi ?></option>
+
+
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Kewarganegaraan</label>
+                        <select name="kewarganegaraan" id="kewarganegaraan" class="form-control">
+                          <option value="" disabled>-Pilih Kewarganegaraan-</option>
+                          <?php foreach ($kewarganegaraan as $x) { ?>
+
+                            <option value="<?php echo $x->id_negara ?>" <?php if ($data->kewarganegaraan == $x->id_negara) {
+                                                                          echo "selected";
+                                                                        } ?>><?php echo $x->nama_negara ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Jenis Pendaftaran</label>
+                        <input type="text" name="jenis_pendaftaran" id="jenis_pendaftaran" class="form-control form-control-alternative" value="Peserta Didik Baru" readonly>
+                        <!-- <select name="jenis_pendaftaran" id="jenis_pendaftaran" class="form-control">
+                          <option value="">-Pilih Jenis Pendaftaran-</option>
+                          <?php foreach ($jenispendaftaran as $x) { ?>
+                            <option value="<?php echo $x->id_jenis_daftar ?>" <?php if ($data->jenis_pendaftaran == $x->id_jenis_daftar) {
+                                                                                echo "selected";
+                                                                              } ?>><?php echo $x->nama_jenis_daftar ?></option>
+
+
+                          <?php } ?>
+                        </select> -->
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Tanggal Masuk Kuliah</label>
+                        <input type="date" name="tgl_masuk_kuliah" id="tgl_masuk_kuliah" class="form-control form-control-alternative" placeholder="Tanggal Masuk Kuliah .." value="<?php echo $data->tgl_masuk_kuliah ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="form-group">
+                        <label class="form-control-label">Tahun Masuk Kuliah</label>
+                        <input type="number" name="tahun_masuk_kuliah" id="tahun_masuk_kuliah" class="form-control form-control-alternative" placeholder="Tahun Masuk Kuliah .." value="<?php echo date('Y') . '1' ?>" readonly>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Jenis Pembiayaan</label>
+                        <input type="text" name="pembiayaan" id="pembiayaan" class="form-control form-control-alternative" value="Beasiswa Penuh" readonly>
+                        <!-- <select name="pembiayaan" id="pembiayaan" class="form-control" >
+                          <option value="">-Pilih Jenis Pembiayaan-</option>
+                          <?php foreach ($pembiayaan as $x) { ?>
+
+                            <option value="<?php echo $x->id_pembiayaan ?>" <?php if ($data->pembiayaan == $x->id_pembiayaan) {
+                                                                              echo "selected";
+                                                                            } ?>><?php echo $x->nama_pembiayaan ?></option>
+                          <?php } ?>
+                        </select> -->
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-country">Country</label>
-                        <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
+                        <label class="form-control-label">Jalur Masuk</label>
+                        <input type="text" name="jalur_masuk" id="jalur_masuk" class="form-control form-control-alternative" value="Program Kerjasama Perusahaan/Institusi/Pemerintah" readonly>
+
+                        <!-- <select name="jalur_masuk" id="jalur_masuk" class="form-control">
+                                                  <option value="">-Pilih Jalur Masuk-</option>
+                          <?php foreach ($jalurmasuk as $x) { ?>
+
+                            <option value="<?php echo $x->id_jalur_masuk ?>" <?php if ($data->jalur_masuk == $x->id_jalur_masuk) {
+                                                                                echo "selected";
+                                                                              } ?>><?php echo $x->nama_jalur_masuk ?></option>
+
+                          <?php } ?>
+                        </select> -->
                       </div>
                     </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Penempatan</label>
+                        <select name="penempatan" id="penempatan" class="form-control">
+                          <option value="" disabled>-Pilih Penempatan-</option>
+                          <?php foreach ($kampus as $x) { ?>
+
+                            <option value="<?php echo $x->nama_satker ?>" <?php if ($data->penempatan == $x->nama_satker) {
+                                                                            echo "selected";
+                                                                          } ?>><?php echo $x->nama_satker ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <input type="hidden" name="status" id="status" value="aktif">
+                    <input type="hidden" name="tingkat" id="tingkat" value="1">
+                    <input type="hidden" name="angkatan" id="angkatan" value="32">
                     <div class="col-lg-4">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-country">Postal code</label>
-                        <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
+                        <label class="form-control-label">Fakultas</label>
+                        <select name="fk" id="fk" class="form-control">
+                          <option value="" disabled>-Pilih Fakultas-</option>
+                          <?php foreach ($fakulll as $x) { ?>
+                            <option value="<?php echo $x->nama_fakultas; ?>"><?php echo $x->nama_fakultas; ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Prodi</label>
+                        <select name="prodi" id="prodi" class="form-control">
+                          <option value="" disabled>-Pilih Prodi-</option>
+                          <option value="<?php echo $data->id_prodi ?>" selected> <?php echo $data->nama_program_studi ?></option>
+                          <!-- <option value="L">Laki-Laki</option>
+                          <option value="P">Perempuan</option> -->
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="form-group">
+                        <label class="form-control-label">Penerima KPS</label>
+
+                        <select name="penerima_pks" id="penerima_pks" class="form-control">
+                          <option value="" disabled>-Penerima PKS-</option>
+                          <option value="Ya" <?php if ($data->penerima_pks == "Ya") {
+                                                echo "selected";
+                                              } ?>>Ya</option>
+                          <option value="Tidak" <?php if ($data->penerima_pks == "Tidak") {
+                                                  echo "selected";
+                                                } ?>>Tidak</option>
+
+                        </select>
+
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">No KPS</label>
+
+                        <?php if ($data->penerima_pks == "Ya") { ?>
+                          <input type="number" name="no_pks" id="no_pks" class="form-control form-control-alternative" placeholder="No KPS .." value="<?php echo $data->no_pks ?>">
+                        <?php } else { ?>
+                          <input type="number" name="no_pks" id="no_pks" class="form-control form-control-alternative" placeholder="No KPS .." value="<?php echo $data->no_pks ?>" disabled>
+
+                        <?php } ?>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr class="my-4" />
                 <!-- Description -->
-                <h6 class="heading-small text-muted mb-4">About me</h6>
+                <h6 class="heading-small text-muted mb-4">Data Orang Tua</h6>
                 <div class="pl-lg-4">
-                  <div class="form-group">
-                    <label>About Me</label>
-                    <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">NIK Ayah</label>
+                        <input type="number" name="nik_ayah" id="nik_ayah" class="form-control form-control-alternative" placeholder="NIK Ayah .." value="<?php echo $data->nik_ayah ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Nama Ayah</label>
+                        <input type="text" name="nama_ayah" id="nama_ayah" class="form-control form-control-alternative" placeholder="Nama Ayah .." value="<?php echo $data->nama_ayah ?>">
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Tanggal Lahir Ayah</label>
+                        <input type="date" name="tgllahir_ayah" id="tgllahir_ayah" class="form-control form-control-alternative" placeholder="Tanggal Lahir Ayah .." value="<?php echo $data->tgllahir_ayah ?>">
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Pendidikan Ayah</label>
+                        <select name="pendidikan_ayah" id="pendidikan_ayah" class="form-control">
+                          <option value="" disabled>-Pilih Pendidikan Ayah-</option>
+                          <?php foreach ($pendidikan as $x) { ?>
+
+                            <option value="<?php echo $x->id_jenjang_didik ?>" <?php if ($data->pendidikan_ayah == $x->id_jenjang_didik) {
+                                                                                  echo "selected";
+                                                                                } ?>><?php echo $x->nama_jenjang_didik ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Pekerjaan Ayah</label>
+                        <select name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control">
+                          <option value="" disabled>-Pilih Pekerjaan Ayah-</option>
+                          <?php foreach ($pekerjaan as $x) { ?>
+
+                            <option value="<?php echo $x->id_pekerjaan ?>" <?php if ($data->pekerjaan_ayah == $x->id_pekerjaan) {
+                                                                              echo "selected";
+                                                                            } ?>><?php echo $x->nama_pekerjaan ?></option>
+
+
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Penghasilan Ayah</label>
+                        <select name="penghasilan_ayah" id="penghasilan_ayah" class="form-control">
+                          <option value="" disabled>-Pilih Penghasilan Ayah-</option>
+                          <?php foreach ($penghasilan as $x) { ?>
+                            <option value="<?php echo $x->id_penghasilan ?>" <?php if ($data->penghasilan_ayah == $x->id_penghasilan) {
+                                                                                echo "selected";
+                                                                              } ?>><?php echo $x->nama_penghasilan ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">No TLP Ayah</label>
+                        <input type="text" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No TLP Ayah .." value="<?php echo $data->tlp_ayah ?>">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">NIK Ibu</label>
+                        <input type="number" name="nik_ibu" id="nik_ibu" class="form-control form-control-alternative" placeholder="NIK Ibu .." value="<?php echo $data->nik_ibu ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Nama Ibu</label>
+                        <input type="text" name="nama_ibu" id="nama_ibu" class="form-control form-control-alternative" placeholder="Nama Ibu .." value="<?php echo $data->nama_ibu ?>">
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Tanggal Lahir Ibu</label>
+                        <input type="date" name="tgllahir_ibu" id="tgllahir_ibu" class="form-control form-control-alternative" placeholder="Tanggal Lahir Ibu .." value="<?php echo $data->tgllahir_ibu ?>">
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Pendidikan Ibu</label>
+                        <select name="pendidikan_ibu" id="pendidikan_ibu" class="form-control">
+                          <option value="" disabled>-Pilih Pendidikan Ibu-</option>
+                          <?php foreach ($pendidikan as $x) { ?>
+                            <option value="<?php echo $x->id_jenjang_didik ?>" <?php if ($data->pendidikan_ibu == $x->id_jenjang_didik) {
+                                                                                  echo "selected";
+                                                                                } ?>><?php echo $x->nama_jenjang_didik ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Pekerjaan Ibu</label>
+                        <select name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control">
+                          <option value="" disabled>-Pilih Pekerjaan Ibu-</option>
+                          <?php foreach ($pekerjaan as $x) { ?>
+
+                            <option value="<?php echo $x->id_pekerjaan ?>" <?php if ($data->pekerjaan_ibu == $x->id_pekerjaan) {
+                                                                              echo "selected";
+                                                                            } ?>><?php echo $x->nama_pekerjaan ?></option>
+
+
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Penghasilan Ibu</label>
+                        <select name="penghasilan_ibu" id="penghasilan_ibu" class="form-control">
+                          <option value="" disabled>-Pilih Penghasilan Ibu-</option>
+                          <?php foreach ($penghasilan as $x) { ?>
+                            <option value="<?php echo $x->id_penghasilan ?>" <?php if ($data->penghasilan_ibu == $x->id_penghasilan) {
+                                                                                echo "selected";
+                                                                              } ?>><?php echo $x->nama_penghasilan ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">No TLP Ibu</label>
+                        <input type="text" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No TLP Ibu .." value="<?php echo $data->tlp_ibu ?>">
+
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <hr class="my-4" />
+                <!-- Description -->
+                <h6 class="heading-small text-muted mb-4">Data Wali</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">NIK Wali</label>
+                        <input type="number" name="nik_wali" id="nik_wali" class="form-control form-control-alternative" placeholder="NIK Wali .." value="<?php echo $data->nik_wali ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Nama Wali</label>
+                        <input type="text" name="nama_wali" id="nama_wali" class="form-control form-control-alternative" placeholder="Nama Wali .." value="<?php echo $data->nama_ayah ?>">
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Tanggal Lahir Wali</label>
+                        <input type="date" name="tgllahir_wali" id="tgllahir_wali" class=" form-control form-control-alternative" placeholder="Tanggal Lahir Wali .." value="<?php echo $data->tgllahir_wali ?>">
+
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Pendidikan Wali</label>
+                        <select name="pendidikan_wali" id="pendidikan_wali" class="form-control">
+                          <option value="" disabled>-Pilih Pendidikan Wali-</option>
+                          <?php foreach ($pendidikan as $x) { ?>
+                            <option value="<?php echo $x->id_jenjang_didik ?>" <?php if ($data->pendidikan_wali == $x->id_jenjang_didik) {
+                                                                                  echo "selected";
+                                                                                } ?>><?php echo $x->nama_jenjang_didik ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Pekerjaan Wali</label>
+                        <select name="pekerjaan_wali" id="pekerjaan_wali" class="form-control">
+                          <option value="" disabled>-Pilih Pekerjaan Wali-</option>
+                          <?php foreach ($pekerjaan as $x) { ?>
+
+                            <option value="<?php echo $x->id_pekerjaan ?>" <?php if ($data->pekerjaan_wali == $x->id_pekerjaan) {
+                                                                              echo "selected";
+                                                                            } ?>><?php echo $x->nama_pekerjaan ?></option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">Penghasilan Wali</label>
+                        <select name="penghasilan_wali" id="penghasilan_wali" class="form-control">
+                          <option value="" disabled>-Pilih Penghasilan Wali-</option>
+                          <?php foreach ($penghasilan as $x) { ?>
+                            <<option value="<?php echo $x->id_penghasilan ?>" <?php if ($data->penghasilan_wali == $x->id_penghasilan) {
+                                                                                echo "selected";
+                                                                              } ?>><?php echo $x->nama_penghasilan ?></option>
+                            <?php } ?>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="form-control-label">No TLP Wali</label>
+                        <input type="text" name="tlp_wali" id="tlp_wali" class="form-control form-control-alternative" placeholder="No TLP Wali .." value="<?php echo $data->tlp_wali ?>">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
             </div>
           </div>
         </div>
       </div>
+
+
       <!-- Footer -->
       <footer class="footer">
         <div class="row align-items-center justify-content-xl-between">
@@ -200,12 +721,14 @@
             </div>
           </div>
           <div class="col-xl-6">
-            
+
           </div>
         </div>
       </footer>
     </div>
   </div>
+
+
   <!--   Core   -->
   <script src="<?php echo base_url('assets/argon/js/plugins/jquery/dist/jquery.min.js'); ?>"></script>
   <script src="<?php echo base_url('assets/argon/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js'); ?>"></script>
@@ -223,3 +746,92 @@
 </body>
 
 </html>
+
+<script>
+  $('#penerima_pks').change(function() {
+    if ($(this).val() == "Ya") {
+      $('#no_pks').prop("disabled", false);
+    } else {
+      $('#no_pks').prop("disabled", true);
+    }
+  });
+
+
+  $('#provinsi').change(function() {
+    var kab_kota = $(this).val();
+
+    console.log(kab_kota);
+    $.ajax({
+      url: "<?php echo site_url('profile/get_sub_provinsi'); ?>",
+      method: "POST",
+      data: {
+        kab_kota: kab_kota
+      },
+      async: true,
+      dataType: 'json',
+      success: function(data) {
+
+        var html = " ";
+        var i;
+        for (i = 0; i < data.length; i++) {
+
+          html += "<option value=" + "'" + data[i].nama_kabkota + "'" + ">" + data[i].nama_kabkota + "</option>";
+        }
+
+        $('#kab_kota').html(html);
+
+      }
+    });
+    return false;
+  });
+
+  $('#kab_kota').change(function() {
+    var kecamatan = $(this).val();
+    console.log(kecamatan);
+    $.ajax({
+      url: "<?php echo site_url('profile/get_sub_kabkota'); ?>",
+      method: "POST",
+      data: {
+        kecamatan: kecamatan
+      },
+      async: true,
+      dataType: 'json',
+      success: function(data) {
+
+        var html = " ";
+        var i;
+        for (i = 0; i < data.length; i++) {
+          html += '<option value=' + "'" + data[i].id_kecamatan + "'" + '>' + data[i].nama_kecamatan + '</option>';
+        }
+        $('#kecamatan').html(html);
+
+      }
+    });
+    return false;
+  });
+
+  $('#fk').change(function() {
+    var prodi = $(this).val();
+    console.log(prodi);
+    $.ajax({
+      url: "<?php echo site_url('profile/get_sub_category'); ?>",
+      method: "POST",
+      data: {
+        prodi: prodi
+      },
+      async: true,
+      dataType: 'json',
+      success: function(data) {
+
+        var html = '';
+        var i;
+        for (i = 0; i < data.length; i++) {
+          html += '<option value=' + data[i].id_prodi + '>' + data[i].nama_program_studi + '</option>';
+        }
+        $('#prodi').html(html);
+
+      }
+    });
+    return false;
+  });
+</script>
