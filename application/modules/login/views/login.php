@@ -88,7 +88,7 @@
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="50%" alt="">
                 <!-- </div> -->
               </div>
-              <p>LOGIN MENGGUNAKAN NOMOR SPCP <?= date('Y')?></p>
+              <p>LOGIN MENGGUNAKAN NOMOR SPCP ATAU NPP <?= date('Y')?></p>
               <div class="card-body">
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -96,7 +96,7 @@
                       <i class="now-ui-icons users_circle-08"></i>
                     </span>
                   </div>
-                  <input type="text" name="spcp" class="form-control" placeholder="Masukkan no spcp">
+                  <input type="text" name="spcp" class="form-control" placeholder="Masukkan no spcp atau npp">
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">

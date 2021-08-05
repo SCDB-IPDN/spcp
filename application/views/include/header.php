@@ -7,7 +7,7 @@
         <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('assets/img/apple-icon.png');?>">
         <link rel="icon" type="image/png" href="<?php echo base_url('assets/img/favicon.png');?>">
         <title>
-            CAPRA <?php echo date('Y'); ?>
+            PRAJA <?php echo date('Y'); ?>
         </title>
         <!--     Fonts and icons     -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />

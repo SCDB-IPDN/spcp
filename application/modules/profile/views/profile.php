@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    CAPRA
+    PRAJA
   </title>
   <!-- Favicon -->
   <!-- <link href="<?php echo base_url('assets/argon/img/brand/favicon.png'); ?>" rel="icon" type="image/png"> -->
@@ -109,7 +109,7 @@
             <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Form Regitrasi Ulang CAPRA <?= date('Y') ?></h3>
+                  <h3 class="mb-0">Form Praja <?= date('Y') ?></h3>
                 </div>
                 <br>
 

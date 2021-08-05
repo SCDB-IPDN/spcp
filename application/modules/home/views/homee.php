@@ -8,7 +8,7 @@
     Document Title
     =============================================
     -->
-  <title>CAPRA IPDN <?php echo date('Y'); ?></title>
+  <title>PRAJA IPDN <?php echo date('Y'); ?></title>
   <!--  
     Favicons
     =============================================
@@ -64,7 +64,7 @@
     <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://spcp.ipdn.ac.id" target="_blank">CAPRA <?php echo date('Y'); ?></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://spcp.ipdn.ac.id" target="_blank">PRAJA <?php echo date('Y'); ?></a>
         </div>
         <div class="collapse navbar-collapse" id="custom-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -88,7 +88,7 @@
           <div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="15%"></img>
           <?php if (date('m') >= '08') { ?>
-            <div class="font-alt mb-40 titan-title-size-4">CAPRA <?php echo date('Y'); ?></div><a class="section-scroll btn btn-primary  btn-round" href="login">Registrasi Ulang</a>
+            <div class="font-alt mb-40 titan-title-size-4">PRAJA</div><a class="section-scroll btn btn-primary  btn-round" href="login">Login</a>
           <?php } ?>
         </div>
       </div>

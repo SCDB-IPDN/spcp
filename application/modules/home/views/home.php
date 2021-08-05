@@ -93,7 +93,7 @@
             </h1>
             <p class="text-white mb-3">Calon Praja Institut Pemerintahan Dalam Negeri</p>
             <div class="btn-wrapper mb-3">
-              <a href="login" class="btn btn-success btn-link btn-sm">Registrasi Ulang CAPRA <?php echo date('Y'); ?>
+              <a href="login" class="btn btn-success btn-link btn-sm">Login Praja <?php echo date('Y'); ?>
               <i class="tim-icons icon-minimal-right"></i></a>
             </div>
             <div class="btn-wrapper">

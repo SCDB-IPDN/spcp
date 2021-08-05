@@ -103,7 +103,7 @@
               <div class="card-header">
                 <img src="<?php echo base_url('assets/img/mike.jpg'); ?>" class="img-center img-fluid rounded-circle">
                 <h4 class="title">Hasna</h4>
-                <h5 class="title">CAPRA <?php echo date('Y'); ?></h5>
+                <h5 class="title">PRAJA <?php echo date('Y'); ?></h5>
               </div>
               <div class="card-body">
                 
