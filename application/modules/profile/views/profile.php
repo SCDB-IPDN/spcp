@@ -69,7 +69,6 @@
             <p class="text-white mt-0 mb-5">Silahkan Mengisi Form Registrasi Ulang</p>
             <br>
 
-            <p class="text-white mt-0 mb-5">* Perlu diperhatikan pilih prodi 1-10 diurutkan sesuai minat</p>
 
 
           </div>
@@ -115,7 +114,7 @@
             <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Form Praja <?= date('Y') ?></h3>
+                  <h3 class="mb-0">Form Data Praja <?= date('Y') ?></h3>
                 </div>
                 <br>
 
@@ -399,8 +398,8 @@
                         <input type="date" name="tgl_masuk_kuliah" id="tgl_masuk_kuliah" class="form-control form-control-alternative" placeholder="Tanggal Masuk Kuliah .." value="2021-09-07">
                       </div>
                     </div>
-                    <div class="col-lg-2">
-                      <div class="form-group">
+                    <div class="col-lg-3">
+                      <div class=" form-group">
                         <label class="form-control-label">Tahun Masuk Kuliah</label>
                         <input type="number" name="tahun_masuk_kuliah" id="tahun_masuk_kuliah" class="form-control form-control-alternative" placeholder="Tahun Masuk Kuliah .." value="<?php echo date('Y') ?>" disabled>
                       </div>
@@ -452,7 +451,7 @@
                     <div class="col-lg-3">
                       <div class="form-group">
                         <label class="form-control-label">Mulai Semester</label>
-                        <select name="penempatan" id="penempatan" class="form-control" readonly>
+                        <select name="mulai_semester" id="mulai_semester" class="form-control" readonly>
                           <option value="20211">2021/2022 Ganjil</option>
                           <!-- <?php foreach ($mulaisemester as $x) { ?>
 
@@ -520,17 +519,22 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label">Prodi</label>
-                        <h6> Data harus berurutan sesuai minat </h6>
-                        <select class="form-control select2" multiple="multiple" id="prodii" name="prodii[]" data-placeholder="Pilih Prodi 1-10">
-                          <?php foreach ($get_prodisepuluh as $x) { ?>
-                            <option value=" <?php echo $x->id_prodi; ?>"><?php echo $x->nama_program_studi; ?></option>
-                          <?php } ?>
-                        </select>
+                    <?php if ($data->prodi  == NULL) { ?>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="form-control-label">*Prodi</label>
+
+                          <p class="text-black mt-0 mb-1">Note : Perlu diperhatikan pilih prodi 1-10 diurutkan sesuai minat</p>
+                          <select class="form-control select2" multiple="multiple" id="prodii" name="prodii[]" data-placeholder="Pilih Prodi 1-10" required>
+                            <?php foreach ($get_prodisepuluh as $x) { ?>
+                              <option value=" <?php echo $x->id_prodi; ?>"><?php echo $x->nama_program_studi; ?></option>
+                            <?php } ?>
+                          </select>
+                        </div>
                       </div>
-                    </div>
+
+                    <?php } ?>
+
 
                   </div>
                 </div>
@@ -757,7 +761,8 @@
                   </div>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" onClick="return validasi()" class="btn btn-primary">Submit</button>
+                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
               </form>
             </div>
           </div>
@@ -899,4 +904,166 @@
     });
     return false;
   });
+</script>
+
+<script script type="text/javascript">
+  function validasi() {
+
+    var npp = document.getElementById("npp").value;
+    var no_spcp = document.getElementById("no_spcp").value;
+    var nama = document.getElementById("nama").value;
+    var jk = document.getElementById("jk").value;
+    var nisn = document.getElementById("nisn").value;
+    var npwp = document.getElementById("npwp").value;
+    var nik_praja = document.getElementById("nik_praja").value;
+    var tmpt_lahir = document.getElementById("tmpt_lahir").value;
+    var tgl_lahir = document.getElementById("tgl_lahir").value;
+    var alamat = document.getElementById("alamat").value;
+    var rt = document.getElementById("rt").value;
+    var rw = document.getElementById("rw").value;
+    var nama_dusun = document.getElementById("nama_dusun").value;
+    var kelurahan = document.getElementById("kelurahan").value;
+    var kode_pos = document.getElementById("kode_pos").value;
+    var kab_kota = document.getElementById("kab_kota").value;
+    var provinsi = document.getElementById("provinsi").value;
+    var agama = document.getElementById("agama").value;
+    var kecamatan = document.getElementById("kecamatan").value;
+    var tlp_pribadi = document.getElementById("tlp_pribadi").value;
+    var tlp_rumah = document.getElementById("tlp_rumah").value;
+    var email = document.getElementById("email").value;
+    var prodi = document.getElementById("prodi").value;
+    var penerima_pks = document.getElementById("penerima_pks").value;
+    var no_pks = document.getElementById("no_pks").value;
+    var tgl_masuk_kuliah = document.getElementById("tgl_masuk_kuliah").value;
+    var tahun_masuk_kuliah = document.getElementById("tahun_masuk_kuliah").value;
+    var status = document.getElementById("status").value;
+    var tingkat = document.getElementById("tingkat").value;
+    var angkatan = document.getElementById("angkatan").value;
+    var fakultas = document.getElementById("fakultas").value;
+    var biaya_masuk = document.getElementById("biaya_masuk").value;
+    var mulai_semester = document.getElementById("mulai_semester").value;
+    var jenis_tinggal = document.getElementById("jenis_tinggal").value;
+    var alat_transport = document.getElementById("alat_transport").value;
+    var kewarganegaraan = document.getElementById("kewarganegaraan").value;
+    var pembiayaan = document.getElementById("pembiayaan").value;
+    var jalur_masuk = document.getElementById("jalur_masuk").value;
+    var nik_ayah = document.getElementById("nik_ayah").value;
+    var nama_ayah = document.getElementById("nama_ayah").value;
+    var tgllahir_ayah = document.getElementById("tgllahir_ayah").value;
+    var pendidikan_ayah = document.getElementById("pendidikan_ayah").value;
+    var pekerjaan_ayah = document.getElementById("pekerjaan_ayah").value;
+    var penghasilan_ayah = document.getElementById("penghasilan_ayah").value;
+    var tlp_ayah = document.getElementById("tlp_ayah").value;
+    var nik_ibu = document.getElementById("nik_ibu").value;
+    var nama_ibu = document.getElementById("nama_ibu").value;
+    var tgllahir_ibu = document.getElementById("tgllahir_ibu").value;
+    var pendidikan_ibu = document.getElementById("pendidikan_ibu").value;
+    var pekerjaan_ibu = document.getElementById("pekerjaan_ibu").value;
+    var penghasilan_ibu = document.getElementById("penghasilan_ibu").value;
+    var tlp_ibu = document.getElementById("tlp_ibu").value;
+    var nik_wali = document.getElementById("nik_wali").value;
+    var nama_wali = document.getElementById("nama_wali").value;
+    var tgllahir_wali = document.getElementById("tgllahir_wali").value;
+    var tlp_wali = document.getElementById("tlp_wali").value;
+    var pendidikan_wali = document.getElementById("pendidikan_wali").value;
+    var pekerjaan_wali = document.getElementById("pekerjaan_wali").value;
+    var penghasilan_wali = document.getElementById("penghasilan_wali").value;
+    var jenis_pendaftaran = document.getElementById("jenis_pendaftaran").value;
+    var penempatan = document.getElementById("penempatan").value;
+    var asdaf = document.getElementById("asdaf").value;
+    var update_date = document.getElementById("update_date").value;
+    var prodi2 = document.getElementById("prodi2").value;
+    var prodi3 = document.getElementById("prodi3").value;
+    var prodi4 = document.getElementById("prodi4").value;
+    var prodi5 = document.getElementById("prodi5").value;
+    var prodi6 = document.getElementById("prodi6").value;
+    var prodi7 = document.getElementById("prodi7").value;
+    var prodi8 = document.getElementById("prodi8").value;
+    var prodi9 = document.getElementById("prodi9").value;
+
+
+    if (
+      npp != "" &&
+      no_spcp != "" &&
+      nama != "" &&
+      jk != "" &&
+      nisn != "" &&
+      npwp != "" &&
+      nik_praja != "" &&
+      tmpt_lahir != "" &&
+      tgl_lahir != "" &&
+      alamat != "" &&
+      rt != "" &&
+      rw != "" &&
+      nama_dusun != "" &&
+      kelurahan != "" &&
+      kode_pos != "" &&
+      kab_kota != "" &&
+      provinsi != "" &&
+      agama != "" &&
+      kecamatan != "" &&
+      tlp_pribadi != "" &&
+      tlp_rumah != "" &&
+      email != "" &&
+      prodi != "" &&
+      penerima_pks != "" &&
+      no_pks != "" &&
+      tgl_masuk_kuliah != "" &&
+      tahun_masuk_kuliah != "" &&
+      status != "" &&
+      tingkat != "" &&
+      angkatan != "" &&
+      fakultas != "" &&
+      biaya_masuk != "" &&
+      mulai_semester != "" &&
+      jenis_tinggal != "" &&
+      alat_transport != "" &&
+      kewarganegaraan != "" &&
+      pembiayaan != "" &&
+      jalur_masuk != "" &&
+      nik_ayah != "" &&
+      nama_ayah != "" &&
+      tgllahir_ayah != "" &&
+      pendidikan_ayah != "" &&
+      pekerjaan_ayah != "" &&
+      penghasilan_ayah != "" &&
+      tlp_ayah != "" &&
+      nik_ibu != "" &&
+      nama_ibu != "" &&
+      tgllahir_ibu != "" &&
+      pendidikan_ibu != "" &&
+      pekerjaan_ibu != "" &&
+      penghasilan_ibu != "" &&
+      tlp_ibu != "" &&
+      nik_wali != "" &&
+      nama_wali != "" &&
+      tgllahir_wali != "" &&
+      tlp_wali != "" &&
+      pendidikan_wali != "" &&
+      pekerjaan_wali != "" &&
+      penghasilan_wali != "" &&
+      jenis_pendaftaran != "" &&
+      penempatan != "" &&
+      asdaf != "" &&
+      update_date != "" &&
+      prodi2 != "" &&
+      prodi3 != "" &&
+      prodi4 != "" &&
+      prodi5 != "" &&
+      prodi6 != "" &&
+      prodi7 != "" &&
+      prodi8 != "" &&
+      prodi9 != ""
+
+    ) {
+      return true;
+    } else {
+      Swal.fire(
+        'Oops',
+        'Periksa kembali Data anda di Data Pribadi, Data Alamat, Data Orang Tua dan Data Wali, ada yang wajib diisi!!!',
+        'question'
+      )
+      return false;
+    }
+  }
 </script>
