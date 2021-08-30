@@ -106,7 +106,7 @@
                   <input type="password" name="password" placeholder="Masukkan password" class="form-control" />
                 </div>
                 <p><b><?php echo $this->session->flashdata('login') ?></b></p>
-                Lupa Password ? <a href="https://api.whatsapp.com/send?phone=6287804813232&text=Izin Bertanya Ibu Hasna" target="_blank">Hubungi Kami</a>
+                Lupa Password ? Hubungi Kami <a href="https://api.whatsapp.com/send?phone=6287804813232&text=Izin Bertanya Ibu Hasna" target="_blank">Admin 1</a> Atau <a href="https://api.whatsapp.com/send?phone=6281317828035&text=Izin Bertanya Ibu Bella" target="_blank">Admin 2</a>
                 <div class="card-footer text-center">
                   <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>
                 </div>
