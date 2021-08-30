@@ -6,79 +6,79 @@ class Profile extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('profile_model');
+		$this->load->model('Profile_model');
 	}
 
 	public function index()
 	{
 		if ($this->session->userdata('spcp') != NULL) {
 
-			$data = $this->profile_model->get_data();
+			$data = $this->Profile_model->get_data();
 			$x['data'] = $data[0];
 
 			// var_dump($data);
 			// exit;
 
-			$prodii = $this->profile_model->prod();
+			$prodii = $this->Profile_model->prod();
 			$x['prodii'] = $prodii;
 
-			$prov = $this->profile_model->get_provinsi()->result();
+			$prov = $this->Profile_model->get_provinsi()->result();
 			$x['prov'] = $prov;
 
-			$agamaa = $this->profile_model->agama()->result();
+			$agamaa = $this->Profile_model->agama()->result();
 			$x['agamaa'] = $agamaa;
 			// var_dump($agamaa);exit;
 
-			$jenistinggal = $this->profile_model->jenistinggal()->result();
+			$jenistinggal = $this->Profile_model->jenistinggal()->result();
 			$x['jenistinggal'] = $jenistinggal;
 
-			$prodi = $this->profile_model->prodi()->result();
+			$prodi = $this->Profile_model->prodi()->result();
 			$x['prodi'] = $prodi;
 
-			$kewarganegaraan = $this->profile_model->kewarganegaraan()->result();
+			$kewarganegaraan = $this->Profile_model->kewarganegaraan()->result();
 			$x['kewarganegaraan'] = $kewarganegaraan;
 
-			$jenispendaftaran = $this->profile_model->jenispendaftaran()->result();
+			$jenispendaftaran = $this->Profile_model->jenispendaftaran()->result();
 			$x['jenispendaftaran'] = $jenispendaftaran;
 
-			$pembiayaan = $this->profile_model->pembiayaan()->result();
+			$pembiayaan = $this->Profile_model->pembiayaan()->result();
 			$x['pembiayaan'] = $pembiayaan;
 
-			$jalurmasuk = $this->profile_model->jalurmasuk()->result();
+			$jalurmasuk = $this->Profile_model->jalurmasuk()->result();
 			$x['jalurmasuk'] = $jalurmasuk;
 
-			$pendidikan = $this->profile_model->pendidikan()->result();
+			$pendidikan = $this->Profile_model->pendidikan()->result();
 			$x['pendidikan'] = $pendidikan;
 
-			$pekerjaan = $this->profile_model->pekerjaan()->result();
+			$pekerjaan = $this->Profile_model->pekerjaan()->result();
 			$x['pekerjaan'] = $pekerjaan;
 
-			$penghasilan = $this->profile_model->penghasilan()->result();
+			$penghasilan = $this->Profile_model->penghasilan()->result();
 			$x['penghasilan'] = $penghasilan;
 
-			$alattransportasi = $this->profile_model->alattransportasi()->result();
+			$alattransportasi = $this->Profile_model->alattransportasi()->result();
 			$x['alattransportasi'] = $alattransportasi;
 
-			$mulaisemester = $this->profile_model->mulaisemester()->result();
+			$mulaisemester = $this->Profile_model->mulaisemester()->result();
 			$x['mulaisemester'] = $mulaisemester;
 
-			$fakulll = $this->profile_model->get_fakultas()->result();
+			$fakulll = $this->Profile_model->get_fakultas()->result();
 			$x['fakulll'] = $fakulll;
 
-			$proddd = $this->profile_model->get_prodi()->result();
+			$proddd = $this->Profile_model->get_prodi()->result();
 			$x['proddd'] = $proddd;
 
-			$get_prodisepuluh = $this->profile_model->get_prodisepuluh()->result();
+			$get_prodisepuluh = $this->Profile_model->get_prodisepuluh()->result();
 			$x['get_prodisepuluh'] = $get_prodisepuluh;
 
 
-			$wilayah = $this->profile_model->get_will()->result();
+			$wilayah = $this->Profile_model->get_will()->result();
 			$x['wilayah'] = $wilayah;
 
-			$kecc = $this->profile_model->get_namakecamatan()->result();
+			$kecc = $this->Profile_model->get_namakecamatan()->result();
 			$x['kecc'] = $kecc;
 
-			$kampus = $this->profile_model->get_kampus()->result();
+			$kampus = $this->Profile_model->get_kampus()->result();
 			$x['kampus'] = $kampus;
 
 			$this->load->view('profile', $x);
@@ -161,7 +161,7 @@ class Profile extends CI_Controller
 
 			$editnya['update_date'] = $tudey;
 
-			$data = $this->profile_model->get_data();
+			$data = $this->Profile_model->get_data();
 			$x['data'] = $data[0];
 
 			foreach ($data as $x) {
@@ -210,7 +210,7 @@ class Profile extends CI_Controller
 					$editnya['prodi9'] = $prodi9;
 				}
 
-				$result = $this->profile_model->editpraja($editnya);
+				$result = $this->Profile_model->editpraja($editnya);
 
 				if (!$result) {
 					$this->session->set_flashdata('success', 'Gagal Mengubah Data');
@@ -228,21 +228,21 @@ class Profile extends CI_Controller
 	function get_sub_provinsi()
 	{
 		$prov = $this->input->post('kab_kota');
-		$data = $this->profile_model->get_sub_provinsi($prov)->result();
+		$data = $this->Profile_model->get_sub_provinsi($prov)->result();
 		echo json_encode($data);
 	}
 
 	function get_sub_kabkota()
 	{
 		$kec = $this->input->post('kecamatan');
-		$data = $this->profile_model->get_sub_kabkota($kec)->result();
+		$data = $this->Profile_model->get_sub_kabkota($kec)->result();
 		echo json_encode($data);
 	}
 
 	function get_sub_category()
 	{
 		$category_id = $this->input->post('prodi', TRUE);
-		$data = $this->profile_model->get_sub_category($category_id)->result();
+		$data = $this->Profile_model->get_sub_category($category_id)->result();
 		echo json_encode($data);
 	}
 }

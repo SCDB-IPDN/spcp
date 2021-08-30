@@ -23,9 +23,9 @@
   <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url('assets/home/images/favicons/apple-icon-152x152.png'); ?>">
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url('assets/home/images/favicons/apple-icon-180x180.png'); ?>">
   <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/5/56/Lambang_IPDN.png">
-  <link rel="manifest" href="<?php echo base_url('assets/home/images/favicons/manifest.json'); ?>">
+  <!-- <link rel="manifest" href="<?php echo base_url('assets/home/images/favicons/manifest.json'); ?>"> -->
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="<?php echo base_url('assets/home/images/favicons/ms-icon-144x144.png'); ?>">
+  <!-- <meta name="msapplication-TileImage" content="<?php echo base_url('assets/home/images/favicons/ms-icon-144x144.png'); ?>"> -->
   <meta name="theme-color" content="#ffffff">
   <!--  
     Stylesheets
