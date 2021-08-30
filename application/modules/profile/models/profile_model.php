@@ -9,17 +9,10 @@ class profile_model extends CI_Model
         $prodi = $this->db->query("SELECT prodi from data_capra where no_spcp ='$no_spcp' ")->result();
 
 
-        if ($kecamatan[0]->kecamatan != NULL && $prodi[0]->prodi != NULL) {
-            $spcp = $this->db->query("SELECT * from data_capra join tbl_users_spcp ON data_capra.no_spcp = tbl_users_spcp.spcp join wilayah ON data_capra.kecamatan = wilayah.id_kecamatan join program_studi on data_capra.prodi = program_studi.id_prodi where no_spcp ='$no_spcp' ")->result();
-        } else {
-            $spcp = $this->db->query("SELECT * from data_capra join tbl_users_spcp ON data_capra.no_spcp = tbl_users_spcp.spcp where no_spcp ='$no_spcp' ")->result();
+        if ($kecamatan[0]->kecamatan != NULL) {
+            $spcp = $this->db->query("SELECT * from data_capra join tbl_users_spcp ON data_capra.no_spcp = tbl_users_spcp.spcp join wilayah ON data_capra.kecamatan = wilayah.id_kecamatan where no_spcp ='$no_spcp' ")->result();
         }
 
-        // if ($prodi[0]->prodi != NULL) {
-        //     $spcp = $this->db->query("SELECT * from data_capra join tbl_users_spcp ON data_capra.no_spcp = tbl_users_spcp.spcp join program_studi ON data_capra.prodi = program_studi.id_prodi where no_spcp ='$no_spcp' ")->result();
-        // } else {
-        //     $spcp = $this->db->query("SELECT * from data_capra join tbl_users_spcp ON data_capra.no_spcp = tbl_users_spcp.spcp where no_spcp ='$no_spcp' ")->result();
-        // }
 
         return $spcp;
     }
@@ -51,7 +44,12 @@ class profile_model extends CI_Model
 
     public function get_prodi()
     {
-        return $this->db->query("SELECT nama_program_studi FROM program_studi order by nama_program_studi ASC");
+        return $this->db->query("SELECT nama_program_studi,id_prodi FROM program_studi order by nama_program_studi ASC");
+    }
+
+    public function get_prodisepuluh()
+    {
+        return $this->db->query("SELECT nama_program_studi,id_prodi FROM program_studi where nama_program_studi like 'D4%' order by nama_program_studi ASC");
     }
 
     public function get_will()
@@ -199,6 +197,17 @@ class profile_model extends CI_Model
         $penghasilan_wali  =  $editnya['penghasilan_wali'];
         $jenis_pendaftaran  =  $editnya['jenis_pendaftaran'];
         $penempatan  =  $editnya['penempatan'];
+        $asdaf  =  $editnya['asdaf'];
+        $update_date = $editnya['update_date'];
+        $prodi2  =  $editnya['prodi2'];
+        $prodi3  =  $editnya['prodi3'];
+        $prodi4  =  $editnya['prodi4'];
+        $prodi5  =  $editnya['prodi5'];
+        $prodi6  =  $editnya['prodi6'];
+        $prodi7  =  $editnya['prodi7'];
+        $prodi8  =  $editnya['prodi8'];
+        $prodi9  =  $editnya['prodi9'];
+
 
         $hasil = $this->db->query("UPDATE data_capra SET
             npp = '$npp',
@@ -261,7 +270,17 @@ class profile_model extends CI_Model
             pekerjaan_wali =  '$pekerjaan_wali',
             penghasilan_wali  =  '$penghasilan_wali',
             jenis_pendaftaran  =  '$jenis_pendaftaran',
-			penempatan = '$penempatan'
+            penempatan = '$penempatan',
+            update_date = '$update_date',
+            asdaf = '$asdaf',
+			prodi2 = '$prodi2',
+            prodi3 = '$prodi3',
+            prodi4 = '$prodi4',
+            prodi5 = '$prodi5',
+            prodi6 = '$prodi6',
+            prodi7 = '$prodi7',
+            prodi8 = '$prodi8',
+            prodi9 = '$prodi9'
          ");
 
         // print("<pre>" . print_r($editnya, true) . "<pre>");

@@ -67,11 +67,11 @@
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://spcp.ipdn.ac.id" target="_blank">PRAJA <?php echo date('Y'); ?></a>
         </div>
         <div class="collapse navbar-collapse" id="custom-collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <!-- <ul class="nav navbar-nav navbar-right">
             <?php if (date('m') >= '05') { ?>
               <li><a href="login" class="btn btn-sm btn-warning btn-round">Login</a></li>
             <?php } ?>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </nav>

@@ -16,10 +16,11 @@ class Profile extends CI_Controller
 			$data = $this->profile_model->get_data();
 			$x['data'] = $data[0];
 
+			// var_dump($data);
+			// exit;
+
 			$prodii = $this->profile_model->prod();
 			$x['prodii'] = $prodii;
-
-
 
 			$prov = $this->profile_model->get_provinsi()->result();
 			$x['prov'] = $prov;
@@ -67,6 +68,10 @@ class Profile extends CI_Controller
 			$proddd = $this->profile_model->get_prodi()->result();
 			$x['proddd'] = $proddd;
 
+			$get_prodisepuluh = $this->profile_model->get_prodisepuluh()->result();
+			$x['get_prodisepuluh'] = $get_prodisepuluh;
+
+
 			$wilayah = $this->profile_model->get_will()->result();
 			$x['wilayah'] = $wilayah;
 
@@ -76,8 +81,8 @@ class Profile extends CI_Controller
 			$kampus = $this->profile_model->get_kampus()->result();
 			$x['kampus'] = $kampus;
 
-
 			$this->load->view('profile', $x);
+			$this->load->view('include/alert');
 		} else {
 			redirect('login');
 		}
@@ -108,7 +113,7 @@ class Profile extends CI_Controller
 			$editnya['tlp_pribadi'] = $this->input->post('tlp_pribadi', true);
 			$editnya['tlp_rumah'] = $this->input->post('tlp_rumah', true);
 			$editnya['email'] = $this->input->post('email', true);
-			$editnya['prodi'] = $this->input->post('prodi', true);
+
 			$editnya['penerima_pks'] = $this->input->post('penerima_pks', true);
 			$editnya['no_pks'] = $this->input->post('no_pks', true);
 			$editnya['tgl_masuk_kuliah'] = $this->input->post('tgl_masuk_kuliah', true);
@@ -150,17 +155,72 @@ class Profile extends CI_Controller
 			$editnya['status'] = $this->input->post('status', true);
 			$editnya['angkatan'] = $this->input->post('angkatan', true);
 			$editnya['tingkat'] = $this->input->post('tingkat', true);
+			$editnya['asdaf'] = $this->input->post('asdaf', true);
 
-			$result = $this->profile_model->editpraja($editnya);
-			// var_dump($editnya);
-			// exit;
+			$tudey = date("Y-m-d H:i:s");
 
-			if (!$result) {
-				$this->session->set_flashdata('notif', ['danger', 'Gagal Mengubah Data']);
-				redirect('profile');
-			} else {
-				$this->session->set_flashdata('notif', ['success', 'Berhasil Mengubah Data']);
-				redirect('profile');
+			$editnya['update_date'] = $tudey;
+
+			$data = $this->profile_model->get_data();
+			$x['data'] = $data[0];
+
+			foreach ($data as $x) {
+				$prodi = $x->prodi;
+				$prodi2 = $x->prodi2;
+				$prodi3 = $x->prodi3;
+				$prodi4 = $x->prodi4;
+				$prodi5 = $x->prodi5;
+				$prodi6 = $x->prodi6;
+				$prodi7 = $x->prodi7;
+				$prodi8 = $x->prodi8;
+				$prodi9 = $x->prodi9;
+
+
+				if ($prodi == NULL) {
+
+					$implodeprodi = implode(",", $this->input->post('prodii', true));
+					$explodeprodi = explode(",", $implodeprodi);
+					$total = count($explodeprodi);
+
+
+					if ($total < 10) {
+						$this->session->set_flashdata('success', 'Lengkapi Program Studi');
+						redirect('profile');
+					} else {
+						$editnya['prodi'] = $explodeprodi[0];
+						$editnya['prodi2'] = $explodeprodi[1];
+						$editnya['prodi3'] = $explodeprodi[2];
+						$editnya['prodi4'] = $explodeprodi[3];
+						$editnya['prodi5'] = $explodeprodi[4];
+						$editnya['prodi6'] = $explodeprodi[5];
+						$editnya['prodi7'] = $explodeprodi[6];
+						$editnya['prodi8'] = $explodeprodi[7];
+						$editnya['prodi9'] = $explodeprodi[8];
+					}
+				} else {
+
+					$editnya['prodi'] = $prodi;
+					$editnya['prodi2'] = $prodi2;
+					$editnya['prodi3'] = $prodi3;
+					$editnya['prodi4'] = $prodi4;
+					$editnya['prodi5'] = $prodi5;
+					$editnya['prodi6'] = $prodi6;
+					$editnya['prodi7'] = $prodi7;
+					$editnya['prodi8'] = $prodi8;
+					$editnya['prodi9'] = $prodi9;
+				}
+
+				$result = $this->profile_model->editpraja($editnya);
+
+				if (!$result) {
+					$this->session->set_flashdata('success', 'Gagal Mengubah Data');
+					redirect('profile');
+				} else {
+					$this->session->set_flashdata('success', 'Berhasil Mengubah Data');
+					redirect('profile');
+				}
+				// var_dump($editnya);
+				// exit;
 			}
 		}
 	}

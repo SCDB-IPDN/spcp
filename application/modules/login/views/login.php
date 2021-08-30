@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	 <!-- CSS Files -->
+  <!-- CSS Files -->
   <link href="<?php echo base_url('assets/login/css/bootstrap.min.css'); ?>" rel="stylesheet" />
   <link href="<?php echo base_url('assets/login/css/now-ui-kit.css?v=1.3.0'); ?>" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -85,10 +84,10 @@
             <form class="form" method="POST" action="login/proses">
               <div class="card-header text-center">
                 <!-- <div class="logo-container"> -->
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="50%" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lambang_IPDN.png/781px-Lambang_IPDN.png" width="50%" alt="">
                 <!-- </div> -->
               </div>
-              <p>LOGIN MENGGUNAKAN NOMOR SPCP ATAU NPP <?= date('Y')?></p>
+              <p>LOGIN SPCP <?= date('Y') ?></p>
               <div class="card-body">
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -106,10 +105,10 @@
                   </div>
                   <input type="password" name="password" placeholder="Masukkan password" class="form-control" />
                 </div>
-                <p><b><?php echo $this->session->flashdata('login') ?></b></p>  
+                <p><b><?php echo $this->session->flashdata('login') ?></b></p>
                 Lupa Password ? <a href="https://api.whatsapp.com/send?phone=6287804813232&text=Izin Bertanya Ibu Hasna" target="_blank">Hubungi Kami</a>
                 <div class="card-footer text-center">
-                  <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>                
+                  <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>
                 </div>
               </div>
             </form>
@@ -119,7 +118,7 @@
     </div>
     <footer class="footer">
       <div class=" container ">
-        
+
         <div class="copyright" id="copyright">
           &copy;
           <script>
