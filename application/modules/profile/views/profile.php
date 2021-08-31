@@ -847,12 +847,12 @@
 
 
     ) {
-      console.log(prodi.length < 40);
+      console.log(optionLength);
 
       if (optionLength != 10) {
         Swal.fire(
           'Oops',
-          'Periksa kembali data prodi ,<b> prodi diurutkan 1-10 sesuai minat dan di wajibkan mengisi 10 Prodi  </b> !!',
+          'Periksa kembali data prodi! Anda baru mengisi <b>' + optionLength + '</b>  prodi, <b> prodi diurutkan 1-10 sesuai minat dan di wajibkan mengisi 10 Prodi  </b> !!',
           'question'
         )
         return false;
