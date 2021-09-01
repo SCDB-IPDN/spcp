@@ -38,8 +38,13 @@
                             aria-expanded="false">
                             <div class="media align-items-center">
                                 <span class="avatar avatar-sm rounded-circle">
+                                    <?php if($this->session->userdata('jk') == 'L'){ ?>
                                     <img alt="Image placeholder"
                                         src="https://meetanentrepreneur.lu/wp-content/uploads/2019/08/profil-linkedin-300x300.jpg">
+                                    <?php }else{ ?>
+                                    <img alt="Image placeholder"
+                                        src="https://st4.depositphotos.com/12780408/25357/v/600/depositphotos_253570434-stock-illustration-woman-face-profile-line-icon.jpg">
+                                    <?php } ?>
                                 </span>
                                 <div class="media-body ml-2 d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('nama') ?>
@@ -88,8 +93,13 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
+                                        <?php if($this->session->userdata('jk') == 'L'){ ?>
                                         <img src="https://meetanentrepreneur.lu/wp-content/uploads/2019/08/profil-linkedin-300x300.jpg"
                                             class="rounded-circle">
+                                        <?php }else{ ?>
+                                        <img src="https://st4.depositphotos.com/12780408/25357/v/600/depositphotos_253570434-stock-illustration-woman-face-profile-line-icon.jpg"
+                                            class="rounded-circle">
+                                        <?php } ?>
                                     </a>
                                 </div>
                             </div>
