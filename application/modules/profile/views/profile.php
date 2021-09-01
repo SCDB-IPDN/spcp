@@ -134,6 +134,7 @@
                                     <p>
                                         <font color='red'>* </font>Data Wajib diisi
                                     </p>
+                                    <p>Data wali, jika tidak diisi. Wajib Mengisikan "-" atau "0"</p>
                                     <a href="https://s,id/PanduanSpcp2021" class="btn btn-primary" target="_blank"><i
                                             class="fa fa-download"> Panduan Pengisian Form Data Praja
                                             <?= date('Y') ?></i></a>
@@ -296,12 +297,12 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Alamat
                                                 </label>
-                                                <input type="text" name="alamat" id="alamat"
+                                                <textarea name="alamat" id="alamat"
                                                     class="form-control form-control-alternative"
-                                                    placeholder="Alamat  .." value="<?php echo $data->alamat ?>">
+                                                    placeholder="Alamat  .."><?php echo $data->alamat ?></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-lg-1">
+                                        <div class=" col-lg-2">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>RT
@@ -311,7 +312,7 @@
                                                     value="<?php echo $data->rt ?>">
                                             </div>
                                         </div>
-                                        <div class="col-lg-1">
+                                        <div class="col-lg-2">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>RW
@@ -321,7 +322,7 @@
                                                     value="<?php echo $data->rw ?>">
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Provinsi
@@ -349,8 +350,6 @@
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label">
@@ -386,6 +385,8 @@
                                                     placeholder="Kelurahan .." value="<?php echo $data->kelurahan ?>">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
@@ -410,7 +411,7 @@
                                                     <font color='red'>*</font>Asal Pendaftaran
                                                 </label>
                                                 <select name="asdaf" id="asdaf" class="form-control">
-                                                    <option value="" disabled>-Pilih Asal Pendaftaran-</option>
+                                                    <option value="">-Pilih Asal Pendaftaran-</option>
                                                     <?php foreach ($wilayah as $x) { ?>
                                                     <option value="<?php echo $x->nama_provinsi ?>"
                                                         <?php if ($data->asdaf == $x->nama_provinsi) { echo "selected"; } ?>>
@@ -427,7 +428,7 @@
                                                     <font color='red'>*</font>Jenis Tinggal
                                                 </label>
                                                 <select name="jenis_tinggal" id="jenis_tinggal" class="form-control">
-                                                    <option value="" disabled>-Pilih Jenis Tinggal-</option>
+                                                    <option value="">-Pilih Jenis Tinggal-</option>
                                                     <?php foreach ($jenistinggal as $x) { ?>
                                                     <option value="<?php echo $x->id_jenis_tinggal ?>"
                                                         <?php if ($data->jenis_tinggal == $x->id_jenis_tinggal) { echo "selected"; } ?>>
@@ -443,7 +444,7 @@
                                                     <font color='red'>*</font>Alat Transportasi
                                                 </label>
                                                 <select name="alat_transport" id="alat_transport" class="form-control">
-                                                    <option value="" disabled>-Pilih Alat Transportasi-</option>
+                                                    <option value="">-Pilih Alat Transportasi-</option>
                                                     <?php foreach ($alattransportasi as $x) { ?>
 
                                                     <option value="<?php echo $x->id_alat_transportasi ?>"
@@ -643,7 +644,7 @@
                                                 </label>
                                                 <select name="pendidikan_ayah" id="pendidikan_ayah"
                                                     class="form-control">
-                                                    <option value="" disabled>-Pilih Pendidikan Ayah-</option>
+                                                    <option value="">-Pilih Pendidikan Ayah-</option>
                                                     <?php foreach ($pendidikan as $x) { ?>
 
                                                     <option value="<?php echo $x->id_jenjang_didik ?>"
@@ -660,7 +661,7 @@
                                                     <font color='red'>*</font>Pekerjaan Ayah
                                                 </label>
                                                 <select name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control">
-                                                    <option value="" disabled>-Pilih Pekerjaan Ayah-</option>
+                                                    <option value="">-Pilih Pekerjaan Ayah-</option>
                                                     <?php foreach ($pekerjaan as $x) { ?>
 
                                                     <option value="<?php echo $x->id_pekerjaan ?>"
@@ -679,7 +680,7 @@
                                                 </label>
                                                 <select name="penghasilan_ayah" id="penghasilan_ayah"
                                                     class="form-control">
-                                                    <option value="" disabled>-Pilih Penghasilan Ayah-</option>
+                                                    <option value="">-Pilih Penghasilan Ayah-</option>
                                                     <?php foreach ($penghasilan as $x) { ?>
                                                     <option value="<?php echo $x->id_penghasilan ?>"
                                                         <?php if ($data->penghasilan_ayah == $x->id_penghasilan) { echo "selected"; } ?>>
@@ -741,7 +742,7 @@
                                                     <font color='red'>*</font>Pendidikan Ibu
                                                 </label>
                                                 <select name="pendidikan_ibu" id="pendidikan_ibu" class="form-control">
-                                                    <option value="" disabled>-Pilih Pendidikan Ibu-</option>
+                                                    <option value="">-Pilih Pendidikan Ibu-</option>
                                                     <?php foreach ($pendidikan as $x) { ?>
                                                     <option value="<?php echo $x->id_jenjang_didik ?>" <?php if ($data->pendidikan_ibu == $x->id_jenjang_didik) {
                                                                                   echo "selected";
@@ -757,7 +758,7 @@
                                                     <font color='red'>*</font>Pekerjaan Ibu
                                                 </label>
                                                 <select name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control">
-                                                    <option value="" disabled>-Pilih Pekerjaan Ibu-</option>
+                                                    <option value="">-Pilih Pekerjaan Ibu-</option>
                                                     <?php foreach ($pekerjaan as $x) { ?>
 
                                                     <option value="<?php echo $x->id_pekerjaan ?>"
@@ -775,7 +776,7 @@
                                                 </label>
                                                 <select name="penghasilan_ibu" id="penghasilan_ibu"
                                                     class="form-control">
-                                                    <option value="" disabled>-Pilih Penghasilan Ibu-</option>
+                                                    <option value="">-Pilih Penghasilan Ibu-</option>
                                                     <?php foreach ($penghasilan as $x) { ?>
                                                     <option value="<?php echo $x->id_penghasilan ?>"
                                                         <?php if ($data->penghasilan_ibu == $x->id_penghasilan) { echo "selected"; } ?>>
@@ -840,7 +841,7 @@
                                                 </label>
                                                 <select name="pendidikan_wali" id="pendidikan_wali"
                                                     class="form-control">
-                                                    <option value="" disabled>-Pilih Pendidikan Wali-</option>
+                                                    <option value="">-Pilih Pendidikan Wali-</option>
                                                     <?php foreach ($pendidikan as $x) { ?>
                                                     <option value="<?php echo $x->id_jenjang_didik ?>"
                                                         <?php if ($data->pendidikan_wali == $x->id_jenjang_didik) { echo "selected"; } ?>>
@@ -856,7 +857,7 @@
                                                     <font color='red'>*</font>Pekerjaan Wali
                                                 </label>
                                                 <select name="pekerjaan_wali" id="pekerjaan_wali" class="form-control">
-                                                    <option value="" disabled>-Pilih Pekerjaan Wali-</option>
+                                                    <option value="">-Pilih Pekerjaan Wali-</option>
                                                     <?php foreach ($pekerjaan as $x) { ?>
 
                                                     <option value="<?php echo $x->id_pekerjaan ?>"
@@ -874,7 +875,7 @@
                                                 </label>
                                                 <select name="penghasilan_wali" id="penghasilan_wali"
                                                     class="form-control">
-                                                    <option value="" disabled>-Pilih Penghasilan Wali-</option>
+                                                    <option value="">-Pilih Penghasilan Wali-</option>
                                                     <?php foreach ($penghasilan as $x) { ?>
                                                     <option value="<?php echo $x->id_penghasilan ?>"
                                                         <?php if ($data->penghasilan_wali == $x->id_penghasilan) { echo "selected"; } ?>>
