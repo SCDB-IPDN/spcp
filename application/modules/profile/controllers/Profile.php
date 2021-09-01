@@ -164,15 +164,17 @@ class Profile extends CI_Controller
 			$implodeprodi = implode(",", $this->input->post('prodii', true));
 			$explodeprodi = explode(",", $implodeprodi);
 
-			$editnya['prodi'] = $explodeprodi[0];
-			$editnya['prodi2'] = $explodeprodi[1];
-			$editnya['prodi3'] = $explodeprodi[2];
-			$editnya['prodi4'] = $explodeprodi[3];
-			$editnya['prodi5'] = $explodeprodi[4];
-			$editnya['prodi6'] = $explodeprodi[5];
-			$editnya['prodi7'] = $explodeprodi[6];
-			$editnya['prodi8'] = $explodeprodi[7];
-			$editnya['prodi9'] = $explodeprodi[8];
+			$editnya['prodi'] = LTRIM($explodeprodi[0]);
+			$editnya['prodi2'] = LTRIM($explodeprodi[1]);
+			$editnya['prodi3'] = LTRIM($explodeprodi[2]);
+			$editnya['prodi4'] = LTRIM($explodeprodi[3]);
+			$editnya['prodi5'] = LTRIM($explodeprodi[4]);
+			$editnya['prodi6'] = LTRIM($explodeprodi[5]);
+			$editnya['prodi7'] = LTRIM($explodeprodi[6]);
+			$editnya['prodi8'] = LTRIM($explodeprodi[7]);
+			$editnya['prodi9'] = LTRIM($explodeprodi[8]);
+			$editnya['prodi10'] = LTRIM($explodeprodi[9]);
+
 
 			$result = $this->Profile_model->editpraja($editnya);
 

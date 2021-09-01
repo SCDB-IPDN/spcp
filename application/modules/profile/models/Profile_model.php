@@ -207,6 +207,7 @@ class Profile_model extends CI_Model
         $prodi7  =  $editnya['prodi7'];
         $prodi8  =  $editnya['prodi8'];
         $prodi9  =  $editnya['prodi9'];
+        $prodi10  =  $editnya['prodi10'];
 
 
         $hasil = $this->db->query("UPDATE data_capra SET
@@ -280,7 +281,8 @@ class Profile_model extends CI_Model
             prodi6 = '$prodi6',
             prodi7 = '$prodi7',
             prodi8 = '$prodi8',
-            prodi9 = '$prodi9'
+            prodi9 = '$prodi9',
+            prodi10 = '$prodi10'
          ");
 
         // print("<pre>" . print_r($editnya, true) . "<pre>");

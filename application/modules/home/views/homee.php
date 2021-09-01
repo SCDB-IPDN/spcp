@@ -268,7 +268,7 @@
                       <tr>
                         <td class="text-center"> 1. </td>
                         <td>Pelamar mendaftar secara online/daring Calon Peserta mengakses ke portal SSCASN BKN. </td>
-                        <td rowspan="5" class="align-middle">1-30 April <?= date('Y') ?></td>
+                        <td rowspan="5" class="align-middle">9-30 April <?= date('Y') ?></td>
                         <td rowspan="5" class="align-middle">Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a></td>
                       </tr>
                       <tr>
@@ -281,7 +281,7 @@
                       </tr>
                       <tr>
                         <td class="text-center">4.</td>
-                        <td>Pelamar mengunggah biodata dan memilih sekolah kedinasan.</td>
+                        <td>Pelamar memilih Sekolah Kedinasan dan mengisi biodata serta mengunggah dokumen persyaratan administrasi SPCP IPDN.</td>
                       </tr>
                       <tr>
                         <td class="text-center">5.</td>
@@ -290,7 +290,7 @@
                       <tr>
                         <td class="text-center">6.</td>
                         <td>Verifikasi dokumen persyaratan administrasi pendaftaran yang telah diunggah.</td>
-                        <td>2 April - 3 Mei <?= date('Y') ?></td>
+                        <td>10 April - 3 Mei <?= date('Y') ?></td>
                         <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a></td>
                       </tr>
                       <tr>
@@ -302,55 +302,55 @@
                       <tr>
                         <td class="text-center">8.</td>
                         <td>Pelamar yang memenuhi syarat verifikasi dokumen persyaratan administrasi pendaftaran melakukan pembayaran PNBP Seleksi Kompetensi Dasar (SKD) sesuai kode billing.</td>
-                        <td>Mei -Juni <?= date('Y') ?></td>
+                        <td>15 - 23 Mei <?= date('Y') ?></td>
                         <td>Bank yang ditunjuk oleh BKN</td>
                       </tr>
                       <tr>
                         <td class="text-center">9.</td>
                         <td>Pelamar yang telah melakukan pembayaran PNBP SKD mencetak kartu ujian melalui akun masing-masing pada website SSCASN BKN.</td>
-                        <td>Mei - Juni <?= date('Y') ?></td>
+                        <td>25 Mei <?= date('Y') ?></td>
                         <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a></td>
                       </tr>
                       <tr>
                         <td class="text-center">10.</td>
                         <td>Pengumuman Peserta SKD.</td>
-                        <td>Juni <?= date('Y') ?></td>
+                        <td>27 Mei <?= date('Y') ?></td>
                         <td>Laman <a href="https://dikdin.bkn.go.id/" target="_blank">https://dikdin.bkn.go.id/ </a> dan Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                       </tr>
                       <tr>
                         <td class="text-center">11.</td>
                         <td>Pelaksanaan SKD.</td>
-                        <td>Juni - Juli <?= date('Y') ?></td>
+                        <td>3 - 28 Juni <?= date('Y') ?></td>
                         <td>Lokasi yang ditunjuk Panitia SPCP IPDN</td>
                       </tr>
                       <tr>
                         <td class="text-center">12.</td>
                         <td>Pengumuman Hasil SKD.</td>
-                        <td>Juli <?= date('Y') ?></td>
+                        <td> 9 Juli <?= date('Y') ?></td>
                         <td>Laman <a href="https://dikdin.bkn.go.id" target="_blank">https://dikdin.bkn.go.id</a><br>dan Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                       </tr>
                       <tr>
                         <td class="text-center">13.</td>
                         <td>Pelaksanaan Tes Kesehatan Tahap I.</td>
-                        <td>Juli - Agustus <?= date('Y') ?></td>
+                        <td> 22 - 23 Juli <?= date('Y') ?></td>
                         <td>Rumah Sakit Bhayangkara/Biddokkes POLDA</td>
                       </tr>
                       <tr>
                         <td class="text-center">14.</td>
                         <td>Pengumuman Hasil Tes Kesehatan Tahap I.</td>
-                        <td>Juli - Agustus <?= date('Y') ?></td>
+                        <td> 28 Juli <?= date('Y') ?></td>
                         <td>Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                       </tr>
                       <tr>
                         <td class="text-center">15.</td>
                         <td>Pelaksanaan Tes Psikologi, Integritas dan Kejujuran</td>
-                        <td>Juli - Agustus <?= date('Y') ?></td>
-                        <td>Biro SDM POLDA</td>
+                        <td>12 Agustus <?= date('Y') ?></td>
+                        <td>Psikologi POLDA</td>
                       </tr>
                       <tr>
                         <td class="text-center">16.</td>
                         <td>Pengumuman Hasil Tes Psikologi, Integritas dan Kejujuran</td>
-                        <td>Juli - Agustus <?= date('Y') ?></td>
+                        <td>17 Agustus <?= date('Y') ?></td>
                         <td>Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                       </tr>
                       <tr>
@@ -363,25 +363,25 @@
                             <li>Tes Kesamaptaan dan Pemeriksaan Penampilan</li>
                           </ul>
                         </td>
-                        <td>Agustus <?= date('Y') ?></td>
+                        <td>23 - 27 Agustus <?= date('Y') ?></td>
                         <td>
                           <ul>
-                            <li><a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></li>
-                            <li>Rumah Sakit Bhayangkara/Biddokes</li>
-                            <li>Biro SDM Polda/Stadion Olahraga</li>
+
+                            <li>Rumah Sakit Bhayangkara/Biddokkes/POLDA</li>
+
                           </ul>
                         </td>
                       </tr>
                       <tr>
                         <td class="text-center">18.</td>
                         <td>Pengumuman Hasil Pantukhir</td>
-                        <td>Agustus <?= date('Y') ?></td>
-                        <td>Laman <a href="https://dikdin.bkn.go.id" target="_blank">https://dikdin.bkn.go.id</a><br>dan Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
+                        <td>1 September <?= date('Y') ?></td>
+                        <td>Laman <a href="https://spcp.ipdn.ac.id/<?= date('Y') ?>" target="_blank">https://spcp.ipdn.ac.id/<?= date('Y') ?></a></td>
                       </tr>
                       <tr>
                         <td class="text-center">19.</td>
                         <td>Registrasi Calon Praja bertempat di kampus IPDN Jatinangor</td>
-                        <td>Sepetember <?= date('Y') ?></td>
+                        <td>7 - 12 September <?= date('Y') ?></td>
                         <td rowspan="6" class="align-middle">Kampus IPDN Jatinangor</td>
                       </tr>
                     </tbody>
