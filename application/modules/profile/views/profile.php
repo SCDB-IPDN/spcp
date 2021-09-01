@@ -546,7 +546,7 @@
                                                 </label>
 
                                                 <select name="penerima_pks" id="penerima_pks" class="form-control">
-                                                    <option value="" disabled>-Penerima PKS-</option>
+                                                    <option value="">-Pilih-</option>
                                                     <option value="Ya"
                                                         <?php if ($data->penerima_pks == "Ya") { echo "selected"; } ?>>
                                                         Ya
