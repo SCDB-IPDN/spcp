@@ -8,20 +8,18 @@ class Login_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_users_spcp');
         $this->db->join('data_capra', 'tbl_users_spcp.spcp = data_capra.no_spcp');
-        // $this->db->get_where('tbl_users_spcp', array('spcp' => $spcp));
+        $this->db->where('data_capra.no_spcp', $spcp);
 
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
             $data_user = $query->row();
-            // var_dump($data_user);
-            // exit;
-
 
             $this->db->where("spcp='$spcp'");
             $this->db->where("password='$password'");
 
             $result = $this->db->get('tbl_users_spcp')->result();
+
             if (!empty($result)) {
                 $this->session->set_userdata('spcp', $spcp);
                 $this->session->set_userdata('nama', $data_user->nama);
