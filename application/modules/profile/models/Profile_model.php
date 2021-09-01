@@ -8,10 +8,12 @@ class Profile_model extends CI_Model
         $kecamatan = $this->db->query("SELECT kecamatan from data_capra where no_spcp ='$no_spcp' ")->result();
         $prodi = $this->db->query("SELECT prodi from data_capra where no_spcp ='$no_spcp' ")->result();
 
-
+		
         if ($kecamatan[0]->kecamatan != NULL) {
             $spcp = $this->db->query("SELECT * from data_capra join tbl_users_spcp ON data_capra.no_spcp = tbl_users_spcp.spcp join wilayah ON data_capra.kecamatan = wilayah.id_kecamatan where no_spcp ='$no_spcp' ")->result();
-        }
+        }else{
+			$spcp = $this->db->query("SELECT * from data_capra join tbl_users_spcp ON data_capra.no_spcp = tbl_users_spcp.spcp  where no_spcp ='$no_spcp' ")->result();
+		}
 
 
         return $spcp;

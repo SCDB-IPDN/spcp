@@ -16,9 +16,6 @@ class Profile extends CI_Controller
 			$data = $this->Profile_model->get_data();
 			$x['data'] = $data[0];
 
-			// var_dump($data);
-			// exit;
-
 			$prodii = $this->Profile_model->prod();
 			$x['prodii'] = $prodii;
 
@@ -27,7 +24,6 @@ class Profile extends CI_Controller
 
 			$agamaa = $this->Profile_model->agama()->result();
 			$x['agamaa'] = $agamaa;
-			// var_dump($agamaa);exit;
 
 			$jenistinggal = $this->Profile_model->jenistinggal()->result();
 			$x['jenistinggal'] = $jenistinggal;
