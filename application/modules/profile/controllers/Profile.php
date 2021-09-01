@@ -157,89 +157,86 @@ class Profile extends CI_Controller
 			$data = $this->Profile_model->get_data();
 			$x['data'] = $data[0];
 
-			$implodeprodi = implode(",", $this->input->post('prodii', true));
-			$explodeprodi = explode(",", $implodeprodi);
+			// $implodeprodi = implode(",", $this->input->post('prodii', true));
+			// $explodeprodi = explode(",", $implodeprodi);
 
-			$editnya['prodi'] = LTRIM($explodeprodi[0]);
-			$editnya['prodi2'] = LTRIM($explodeprodi[1]);
-			$editnya['prodi3'] = LTRIM($explodeprodi[2]);
-			$editnya['prodi4'] = LTRIM($explodeprodi[3]);
-			$editnya['prodi5'] = LTRIM($explodeprodi[4]);
-			$editnya['prodi6'] = LTRIM($explodeprodi[5]);
-			$editnya['prodi7'] = LTRIM($explodeprodi[6]);
-			$editnya['prodi8'] = LTRIM($explodeprodi[7]);
-			$editnya['prodi9'] = LTRIM($explodeprodi[8]);
-			$editnya['prodi10'] = LTRIM($explodeprodi[9]);
-
-
-			$result = $this->Profile_model->editpraja($editnya);
-
-			if (!$result) {
-				$this->session->set_flashdata('success', 'Gagal Mengubah Data');
-				redirect('profile');
-			} else {
-				$this->session->set_flashdata('success', 'Berhasil Mengubah Data');
-				redirect('profile');
-			}
-
-			// foreach ($data as $x) {
-			// 	$prodi = $x->prodi;
-			// 	$prodi2 = $x->prodi2;
-			// 	$prodi3 = $x->prodi3;
-			// 	$prodi4 = $x->prodi4;
-			// 	$prodi5 = $x->prodi5;
-			// 	$prodi6 = $x->prodi6;
-			// 	$prodi7 = $x->prodi7;
-			// 	$prodi8 = $x->prodi8;
-			// 	$prodi9 = $x->prodi9;
+			// $editnya['prodi'] = LTRIM($explodeprodi[0]);
+			// $editnya['prodi2'] = LTRIM($explodeprodi[1]);
+			// $editnya['prodi3'] = LTRIM($explodeprodi[2]);
+			// $editnya['prodi4'] = LTRIM($explodeprodi[3]);
+			// $editnya['prodi5'] = LTRIM($explodeprodi[4]);
+			// $editnya['prodi6'] = LTRIM($explodeprodi[5]);
+			// $editnya['prodi7'] = LTRIM($explodeprodi[6]);
+			// $editnya['prodi8'] = LTRIM($explodeprodi[7]);
+			// $editnya['prodi9'] = LTRIM($explodeprodi[8]);
+			// $editnya['prodi10'] = LTRIM($explodeprodi[9]);
 
 
-			// 	if ($prodi == NULL) {
+			// $result = $this->Profile_model->editpraja($editnya);
 
-			// 		$implodeprodi = implode(",", $this->input->post('prodii', true));
-			// 		$explodeprodi = explode(",", $implodeprodi);
-			// 		$total = count($explodeprodi);
-
-
-			// 		if ($total < 10) {
-			// 			$this->session->set_flashdata('success', 'Lengkapi Program Studi');
-			// 			redirect('profile');
-			// 		} else {
-			// 			$editnya['prodi'] = $explodeprodi[0];
-			// 			$editnya['prodi2'] = $explodeprodi[1];
-			// 			$editnya['prodi3'] = $explodeprodi[2];
-			// 			$editnya['prodi4'] = $explodeprodi[3];
-			// 			$editnya['prodi5'] = $explodeprodi[4];
-			// 			$editnya['prodi6'] = $explodeprodi[5];
-			// 			$editnya['prodi7'] = $explodeprodi[6];
-			// 			$editnya['prodi8'] = $explodeprodi[7];
-			// 			$editnya['prodi9'] = $explodeprodi[8];
-			// 		}
-			// 	} else {
-
-			// 		$editnya['prodi'] = $prodi;
-			// 		$editnya['prodi2'] = $prodi2;
-			// 		$editnya['prodi3'] = $prodi3;
-			// 		$editnya['prodi4'] = $prodi4;
-			// 		$editnya['prodi5'] = $prodi5;
-			// 		$editnya['prodi6'] = $prodi6;
-			// 		$editnya['prodi7'] = $prodi7;
-			// 		$editnya['prodi8'] = $prodi8;
-			// 		$editnya['prodi9'] = $prodi9;
-			// 	}
-
-			// 	$result = $this->Profile_model->editpraja($editnya);
-
-			// 	if (!$result) {
-			// 		$this->session->set_flashdata('success', 'Gagal Mengubah Data');
-			// 		redirect('profile');
-			// 	} else {
-			// 		$this->session->set_flashdata('success', 'Berhasil Mengubah Data');
-			// 		redirect('profile');
-			// 	}
-			// 	// var_dump($editnya);
-			// 	// exit;
+			// if (!$result) {
+			// 	$this->session->set_flashdata('success', 'Gagal Mengubah Data');
+			// 	redirect('profile');
+			// } else {
+			// 	$this->session->set_flashdata('success', 'Berhasil Mengubah Data');
+			// 	redirect('profile');
 			// }
+
+			foreach ($data as $x) {
+				$prodi = $x->prodi;
+				$prodi2 = $x->prodi2;
+				$prodi3 = $x->prodi3;
+				$prodi4 = $x->prodi4;
+				$prodi5 = $x->prodi5;
+				$prodi6 = $x->prodi6;
+				$prodi7 = $x->prodi7;
+				$prodi8 = $x->prodi8;
+				$prodi9 = $x->prodi9;
+				$prodi10 = $x->prodi10;
+
+
+				if ($prodi == NULL) {
+
+					$implodeprodi = implode(",", $this->input->post('prodii', true));
+					$explodeprodi = explode(",", $implodeprodi);
+					// $total = count($explodeprodi);
+
+					$editnya['prodi'] = LTRIM($explodeprodi[0]);
+					$editnya['prodi2'] = LTRIM($explodeprodi[1]);
+					$editnya['prodi3'] = LTRIM($explodeprodi[2]);
+					$editnya['prodi4'] = LTRIM($explodeprodi[3]);
+					$editnya['prodi5'] = LTRIM($explodeprodi[4]);
+					$editnya['prodi6'] = LTRIM($explodeprodi[5]);
+					$editnya['prodi7'] = LTRIM($explodeprodi[6]);
+					$editnya['prodi8'] = LTRIM($explodeprodi[7]);
+					$editnya['prodi9'] = LTRIM($explodeprodi[8]);
+					$editnya['prodi10'] = LTRIM($explodeprodi[9]);
+				} else {
+
+					$editnya['prodi'] = $prodi;
+					$editnya['prodi2'] = $prodi2;
+					$editnya['prodi3'] = $prodi3;
+					$editnya['prodi4'] = $prodi4;
+					$editnya['prodi5'] = $prodi5;
+					$editnya['prodi6'] = $prodi6;
+					$editnya['prodi7'] = $prodi7;
+					$editnya['prodi8'] = $prodi8;
+					$editnya['prodi9'] = $prodi9;
+					$editnya['prodi10'] = $prodi10;
+				}
+
+				$result = $this->Profile_model->editpraja($editnya);
+
+				if (!$result) {
+					$this->session->set_flashdata('success', 'Gagal Mengubah Data');
+					redirect('profile');
+				} else {
+					$this->session->set_flashdata('success', 'Berhasil Mengubah Data');
+					redirect('profile');
+				}
+				// var_dump($editnya);
+				// exit;
+			}
 		}
 	}
 

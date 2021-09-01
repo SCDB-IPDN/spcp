@@ -149,11 +149,20 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-username">
+                                                    <font color='red'>*</font>NPP
+                                                </label>
+                                                <input type="text" name="npp" id="npp" class="form-control form-control-alternative" placeholder="NPP .." value="<?php echo $data->npp ?>" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-username">
                                                     <font color='red'>*</font>Nama
                                                 </label>
                                                 <input type="text" name="nama" id="nama" class="form-control form-control-alternative" placeholder="Nama Lengkap .." value="<?php echo $data->nama ?>">
                                             </div>
                                         </div>
+
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label">
@@ -177,7 +186,7 @@
                                                 <label class="form-control-label" for="input-username">
                                                     <font color='red'>*</font>NISN
                                                 </label>
-                                                <input type="text" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>">
+                                                <input type="number" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -187,7 +196,7 @@
                                                 <label class="form-control-label" for="input-email">
                                                     <font color='red'>*</font>NIK
                                                 </label>
-                                                <input type="text" name="nik_praja" id="nik_praja" class="form-control form-control-alternative" placeholder="NIK .." value="<?php echo $data->nik_praja ?>">
+                                                <input type="number" name="nik_praja" id="nik_praja" class="form-control form-control-alternative" placeholder="NIK .." value="<?php echo $data->nik_praja ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -195,7 +204,7 @@
                                                 <label class="form-control-label" for="input-email">
                                                     <font color='red'>*</font>NPWP
                                                 </label>
-                                                <input type="text" name="npwp" id="npwp" class="form-control form-control-alternative" placeholder="NPWP .." value="<?php echo $data->npwp ?>">
+                                                <input type="number" name="npwp" id="npwp" class="form-control form-control-alternative" placeholder="NPWP .." value="<?php echo $data->npwp ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -277,7 +286,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>RT
                                                 </label>
-                                                <input type="text" name="rt" id="rt" class="form-control form-control-alternative" placeholder="RT .." value="<?php echo $data->rt ?>">
+                                                <input type="number" name="rt" id="rt" class="form-control form-control-alternative" placeholder="RT .." value="<?php echo $data->rt ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -285,7 +294,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>RW
                                                 </label>
-                                                <input type="text" name="rw" id="rw" class="form-control form-control-alternative" placeholder="RW .." value="<?php echo $data->rw ?>">
+                                                <input type="number" name="rw" id="rw" class="form-control form-control-alternative" placeholder="RW .." value="<?php echo $data->rw ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
@@ -639,7 +648,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>No TLP Ayah
                                                 </label>
-                                                <input type="text" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No TLP Ayah .." value="<?php echo $data->tlp_ayah ?>">
+                                                <input type="number" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No TLP Ayah .." value="<?php echo $data->tlp_ayah ?>">
 
                                             </div>
                                         </div>
@@ -727,7 +736,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>No TLP Ibu
                                                 </label>
-                                                <input type="text" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No TLP Ibu .." value="<?php echo $data->tlp_ibu ?>">
+                                                <input type="number" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No TLP Ibu .." value="<?php echo $data->tlp_ibu ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -818,7 +827,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>No TLP Wali
                                                 </label>
-                                                <input type="text" name="tlp_wali" id="tlp_wali" class="form-control form-control-alternative" placeholder="No TLP Wali .." value="<?php echo $data->tlp_wali ?>">
+                                                <input type="number" name="tlp_wali" id="tlp_wali" class="form-control form-control-alternative" placeholder="No TLP Wali .." value="<?php echo $data->tlp_wali ?>">
 
                                             </div>
                                         </div>
