@@ -99,7 +99,7 @@
                                 <!-- </div> -->
                             </div>
                             <p>LOGIN PRAJA <?= date('Y') ?></p>
-                            <a href="https://s,id/PanduanSpcp2021" class="btn btn-danger btn-round" target="_blank"><i
+                            <a href="<?= $link->link; ?>" class="btn btn-danger btn-round" target="_blank"><i
                                     class="fa fa-download"> Panduan Pengisian Form Data Praja
                                     <?= date('Y') ?></i></a>
                             <div class="card-body">

@@ -77,6 +77,8 @@ class Profile extends CI_Controller
 			$kampus = $this->Profile_model->get_kampus()->result();
 			$x['kampus'] = $kampus;
 
+			$x['link'] = $this->Profile_model->link_panduan()[0];
+
 			$this->load->view('profile', $x);
 			$this->load->view('include/alert');
 		} else {

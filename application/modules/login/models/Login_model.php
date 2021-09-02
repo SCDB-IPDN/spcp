@@ -72,4 +72,8 @@ class Login_model extends CI_Model
             redirect('profile');
         }
     }
+
+	function link_panduan(){
+		return $this->db->select('link')->from('tbl_config')->where('code', 'PD-01')->get()->result();
+	}
 }

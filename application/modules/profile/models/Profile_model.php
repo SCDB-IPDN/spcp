@@ -2,6 +2,10 @@
 class Profile_model extends CI_Model
 {
 
+	function link_panduan(){
+		return $this->db->select('link')->from('tbl_config')->where('code', 'PD-01')->get()->result();
+	}
+	
     public function get_data()
     {
         $no_spcp = $this->session->userdata('spcp');

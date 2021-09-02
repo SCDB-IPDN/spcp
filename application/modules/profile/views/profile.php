@@ -78,7 +78,7 @@
                     <div class="col-lg-7 col-md-10">
                         <h1 class="display-2 text-white">Hello
                             <?php echo $data->nama . ' ' . $this->session->flashdata('login') ?></h1>
-                        <p class="text-white mt-0 mb-5">Silahkan Mengisi Form Registrasi Ulang</p>
+                        <p class="text-white mt-0 mb-5">Silahkan Mengisi Form Praja</p>
                         <br>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                                         <font color='red'>* </font>Data Wajib diisi
                                     </p>
                                     <p>Data wali, jika tidak diisi. Wajib Mengisikan "-" atau "0"</p>
-                                    <a href="https://s,id/PanduanSpcp2021" class="btn btn-primary" target="_blank"><i
+                                    <a href="<?= $link->link ?>" class="btn btn-primary" target="_blank"><i
                                             class="fa fa-download"> Panduan Pengisian Form Data Praja
                                             <?= date('Y') ?></i></a>
                                 </div>

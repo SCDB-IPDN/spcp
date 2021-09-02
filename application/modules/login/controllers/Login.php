@@ -13,7 +13,9 @@ class Login extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('login');
+		$x['link'] = $this->Login_model->link_panduan()[0];
+
+		$this->load->view('login', $x);
 	}
 
 	public function proses()
