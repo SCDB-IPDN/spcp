@@ -120,7 +120,7 @@ class Profile extends CI_Controller
 			$editnya['tingkat'] = $this->input->post('tingkat', true);
 			$editnya['angkatan'] = $this->input->post('angkatan', true);
 			$editnya['fakultas'] = $this->input->post('fk', true);
-			$editnya['biaya_masuk'] = $this->input->post('biaya_masuk', true);
+			$editnya['biaya_masuk'] = "0";
 			$editnya['mulai_semester'] = $this->input->post('mulai_semester', true);
 			$editnya['jenis_tinggal'] = $this->input->post('jenis_tinggal', true);
 			$editnya['alat_transport'] = $this->input->post('alat_transport', true);
@@ -156,33 +156,9 @@ class Profile extends CI_Controller
 			$editnya['asdaf'] = $this->input->post('asdaf', true);
 			$tudey = date("Y-m-d H:i:s");
 			$editnya['update_date'] = $tudey;
+			
 			$data = $this->Profile_model->get_data();
 			$x['data'] = $data[0];
-
-			// $implodeprodi = implode(",", $this->input->post('prodii', true));
-			// $explodeprodi = explode(",", $implodeprodi);
-
-			// $editnya['prodi'] = LTRIM($explodeprodi[0]);
-			// $editnya['prodi2'] = LTRIM($explodeprodi[1]);
-			// $editnya['prodi3'] = LTRIM($explodeprodi[2]);
-			// $editnya['prodi4'] = LTRIM($explodeprodi[3]);
-			// $editnya['prodi5'] = LTRIM($explodeprodi[4]);
-			// $editnya['prodi6'] = LTRIM($explodeprodi[5]);
-			// $editnya['prodi7'] = LTRIM($explodeprodi[6]);
-			// $editnya['prodi8'] = LTRIM($explodeprodi[7]);
-			// $editnya['prodi9'] = LTRIM($explodeprodi[8]);
-			// $editnya['prodi10'] = LTRIM($explodeprodi[9]);
-
-
-			// $result = $this->Profile_model->editpraja($editnya);
-
-			// if (!$result) {
-			// 	$this->session->set_flashdata('success', 'Gagal Mengubah Data');
-			// 	redirect('profile');
-			// } else {
-			// 	$this->session->set_flashdata('success', 'Berhasil Mengubah Data');
-			// 	redirect('profile');
-			// }
 
 			foreach ($data as $x) {
 				$prodi = $x->prodi;
@@ -236,8 +212,6 @@ class Profile extends CI_Controller
 					$this->session->set_flashdata('success', 'Berhasil Mengubah Data');
 					redirect('profile');
 				}
-				// var_dump($editnya);
-				// exit;
 			}
 		}
 	}

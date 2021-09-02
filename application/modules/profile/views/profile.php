@@ -149,7 +149,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-username">
-                                                    <font color='red'>*</font>NPP
+                                                    NPP
                                                 </label>
                                                 <input type="text" name="npp" id="npp" class="form-control form-control-alternative" placeholder="NPP .." value="<?php echo $data->npp ?>" readonly>
                                             </div>
@@ -168,7 +168,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Jenis Kelamin
                                                 </label>
-                                                <select name="jk" id="jk" class="form-control">
+                                                <select name="jk" id="jk" class="form-control" required>
                                                     <option value="" >-Pilih Jenis Kelamin-</option>
                                                     <option value="L" <?php if ($data->jk == "L") {
                                                                             echo "selected";
@@ -186,7 +186,7 @@
                                                 <label class="form-control-label" for="input-username">
                                                     <font color='red'>*</font>NISN
                                                 </label>
-                                                <input type="number" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>">
+                                                <input type="number" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>" required>
                                             </div>
                                         </div>
 										<div class="col-lg-3">
@@ -194,7 +194,7 @@
                                                 <label class="form-control-label" for="input-email">
                                                     <font color='red'>*</font>NIK
                                                 </label>
-                                                <input type="number" name="nik_praja" id="nik_praja" class="form-control form-control-alternative" placeholder="NIK .." value="<?php echo $data->nik_praja ?>">
+                                                <input type="number" name="nik_praja" id="nik_praja" class="form-control form-control-alternative" placeholder="NIK .." value="<?php echo $data->nik_praja ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -202,7 +202,7 @@
                                                 <label class="form-control-label" for="input-email">
                                                     <font color='red'>*</font>NPWP
                                                 </label>
-                                                <input type="number" name="npwp" id="npwp" class="form-control form-control-alternative" placeholder="NPWP .." value="<?php echo $data->npwp ?>">
+                                                <input type="number" name="npwp" id="npwp" class="form-control form-control-alternative" placeholder="NPWP .." value="<?php echo $data->npwp ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -210,7 +210,7 @@
                                                 <label class="form-control-label" for="input-first-name">
                                                     <font color='red'>*</font>Tempat Lahir
                                                 </label>
-                                                <input type="text" name="tmpt_lahir" id="tmpt_lahir" class="form-control form-control-alternative" placeholder="Tempat Lahir .." value="<?php echo $data->tmpt_lahir ?>">
+                                                <input type="text" name="tmpt_lahir" id="tmpt_lahir" class="form-control form-control-alternative" placeholder="Tempat Lahir .." value="<?php echo $data->tmpt_lahir ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -220,7 +220,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Tanggal Lahir
                                                 </label>
-                                                <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control form-control-alternative" placeholder="Tanggal Lahir .." value="<?php echo $data->tgl_lahir ?>">
+                                                <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control form-control-alternative" placeholder="Tanggal Lahir .." value="<?php echo $data->tgl_lahir ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -229,7 +229,7 @@
                                                     <font color='red'>*</font>Agama
                                                 </label>
 
-                                                <select name="agama" id="agama" class="form-control">
+                                                <select name="agama" id="agama" class="form-control" required>
                                                     <option value="" disabled>-Pilih Agama-</option>
                                                     <?php foreach ($agamaa as $x) { ?>
                                                         <option value="<?php echo $x->id_agama ?>" <?php if ($data->agama == $x->id_agama) {
@@ -246,7 +246,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>No TLP
                                                 </label>
-                                                <input type="number" name="tlp_rumah" id="tlp_rumah" class="form-control form-control-alternative" placeholder="No Tlp .." value="<?php echo $data->tlp_rumah ?>">
+                                                <input type="number" name="tlp_rumah" id="tlp_rumah" class="form-control form-control-alternative" placeholder="No Tlp .." value="<?php echo $data->tlp_rumah ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -254,7 +254,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>No HP
                                                 </label>
-                                                <input type="number" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>">
+                                                <input type="number" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>" required>
                                             </div>
                                         </div>
 
@@ -263,7 +263,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Email
                                                 </label>
-                                                <input type="email" name="email" id="email" class="form-control form-control-alternative" placeholder="Email .." value="<?php echo $data->email ?>">
+                                                <input type="email" name="email" id="email" class="form-control form-control-alternative" placeholder="Email .." value="<?php echo $data->email ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -279,7 +279,7 @@
                                                     <font color='red'>*</font>Alamat
 													<p>Cukup mengisikan nama jalan saja dan nomor rumah jika ada</p>
                                                 </label>
-                                                <textarea name="alamat" id="alamat" class="form-control form-control-alternative" placeholder="Alamat  .."><?php echo $data->alamat ?></textarea>
+                                                <textarea name="alamat" id="alamat" class="form-control form-control-alternative" placeholder="Alamat  .." required><?php echo $data->alamat ?></textarea>
                                             </div>
                                         </div>
                                         <div class=" col-lg-2">
@@ -287,7 +287,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>RT
                                                 </label>
-                                                <input type="number" name="rt" id="rt" class="form-control form-control-alternative" placeholder="RT .." value="<?php echo $data->rt ?>">
+                                                <input type="number" name="rt" id="rt" class="form-control form-control-alternative" placeholder="RT .." value="<?php echo $data->rt ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -295,7 +295,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>RW
                                                 </label>
-                                                <input type="number" name="rw" id="rw" class="form-control form-control-alternative" placeholder="RW .." value="<?php echo $data->rw ?>">
+                                                <input type="number" name="rw" id="rw" class="form-control form-control-alternative" placeholder="RW .." value="<?php echo $data->rw ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
@@ -303,7 +303,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Provinsi
                                                 </label>
-                                                <select name="provinsi" id="provinsi" class="form-control">
+                                                <select name="provinsi" id="provinsi" class="form-control" required>
                                                     <option value="">-Pilih Provinsi-</option>
                                                     <?php foreach ($wilayah as $x) { ?>
                                                         <option value="<?php echo $x->nama_provinsi ?>" <?php if ($data->provinsi == $x->nama_provinsi) {
@@ -320,7 +320,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Kabupaten/Kota
                                                 </label>
-                                                <select name="kab_kota" id="kab_kota" class="form-control">
+                                                <select name="kab_kota" id="kab_kota" class="form-control" required>
                                                     <option value="" disabled>-Pilih Kab/Kota-</option>
                                                     <option value="<?php echo $data->kab_kota ?>" selected>
                                                         <?php echo $data->kab_kota ?></option>
@@ -332,7 +332,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Kecamatan
                                                 </label>
-                                                <select name="kecamatan" id="kecamatan" class="form-control">
+                                                <select name="kecamatan" id="kecamatan" class="form-control" required>
                                                     <option value="" disabled>-Pilih Kecamatan-</option>
                                                     <?php if ($data->id_kecamatan != NULL) { ?>
                                                         <option value="<?php echo $data->id_kecamatan ?>" selected>
@@ -347,7 +347,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Nama Dusun
                                                 </label>
-                                                <input type="text" name="nama_dusun" id="nama_dusun" class="form-control form-control-alternative" placeholder="Nama Dusun .." value="<?php echo $data->nama_dusun ?>">
+                                                <input type="text" name="nama_dusun" id="nama_dusun" class="form-control form-control-alternative" placeholder="Nama Dusun .." value="<?php echo $data->nama_dusun ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -355,7 +355,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Kelurahan
                                                 </label>
-                                                <input type="text" name="kelurahan" id="kelurahan" class="form-control form-control-alternative" placeholder="Kelurahan .." value="<?php echo $data->kelurahan ?>">
+                                                <input type="text" name="kelurahan" id="kelurahan" class="form-control form-control-alternative" placeholder="Kelurahan .." value="<?php echo $data->kelurahan ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -365,7 +365,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Kode Pos
                                                 </label>
-                                                <input type="text" name="kode_pos" id="kode_pos" class="form-control form-control-alternative" placeholder="Kode Pos .." value="<?php echo $data->kode_pos ?>">
+                                                <input type="text" name="kode_pos" id="kode_pos" class="form-control form-control-alternative" placeholder="Kode Pos .." value="<?php echo $data->kode_pos ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -381,7 +381,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Asal Pendaftaran
                                                 </label>
-                                                <select name="asdaf" id="asdaf" class="form-control">
+                                                <select name="asdaf" id="asdaf" class="form-control" required>
                                                     <option value="">-Pilih Asal Pendaftaran-</option>
                                                     <?php foreach ($wilayah as $x) { ?>
                                                         <option value="<?php echo $x->nama_provinsi ?>" <?php if ($data->asdaf == $x->nama_provinsi) {
@@ -399,7 +399,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Jenis Tinggal
                                                 </label>
-                                                <select name="jenis_tinggal" id="jenis_tinggal" class="form-control">
+                                                <select name="jenis_tinggal" id="jenis_tinggal" class="form-control" required>
                                                     <option value="">-Pilih Jenis Tinggal-</option>
                                                     <?php foreach ($jenistinggal as $x) { ?>
                                                         <option value="<?php echo $x->id_jenis_tinggal ?>" <?php if ($data->jenis_tinggal == $x->id_jenis_tinggal) {
@@ -416,7 +416,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Alat Transportasi
                                                 </label>
-                                                <select name="alat_transport" id="alat_transport" class="form-control">
+                                                <select name="alat_transport" id="alat_transport" class="form-control" required>
                                                     <option value="">-Pilih Alat Transportasi-</option>
                                                     <?php foreach ($alattransportasi as $x) { ?>
 
@@ -431,8 +431,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label class="form-control-label"> Kewarganegaraan
-                                                </label>
+                                                <label class="form-control-label">Kewarganegaraan</label>
                                                 <select name="kewarganegaraan" id="kewarganegaraan" class="form-control" readonly>
                                                     <option value="ID">Indonesia</option>
                                                 </select>
@@ -440,8 +439,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label class="form-control-label">Jenis Pendaftaran
-                                                </label>
+                                                <label class="form-control-label">Jenis Pendaftaran</label>
                                                 <select name="jenis_pendaftaran" id="jenis_pendaftaran" class="form-control" readonly>
                                                     <option value="1">Peserta Didik Baru</option>
                                                 </select>
@@ -449,22 +447,19 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label class="form-control-label">Tanggal Masuk Kuliah
-                                                </label>
+                                                <label class="form-control-label">Tanggal Masuk Kuliah</label>
                                                 <input type="date" name="tgl_masuk_kuliah" id="tgl_masuk_kuliah" class="form-control form-control-alternative" placeholder="Tanggal Masuk Kuliah .." value="2021-09-07" readonly>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class=" form-group">
-                                                <label class="form-control-label">Tahun Masuk Kuliah
-                                                </label>
+                                                <label class="form-control-label">Tahun Masuk Kuliah</label>
                                                 <input type="number" name="tahun_masuk_kuliah" id="tahun_masuk_kuliah" class="form-control form-control-alternative" placeholder="Tahun Masuk Kuliah .." value="<?php echo date('Y') ?>" readonly>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label class="form-control-label">Jenis Pembiayaan
-                                                </label>
+                                                <label class="form-control-label">Jenis Pembiayaan</label>
                                                 <select name="pembiayaan" id="pembiayaan" class="form-control" readonly>
                                                     <option value="3">Beasiswa Penuh</option>
                                                 </select>
@@ -473,7 +468,7 @@
                                         <div class="col-lg-5">
                                             <div class="form-group">
                                                 <label class="form-control-label">
-                                                    <font color='red'>*</font>Jalur Masuk
+                                                    Jalur Masuk
                                                 </label>
 
                                                 <select name="jalur_masuk" id="jalur_masuk" class="form-control" readonly>
@@ -511,7 +506,7 @@
                                                     <font color='red'>*</font>Penerima KPS
                                                 </label>
 
-                                                <select name="penerima_pks" id="penerima_pks" class="form-control">
+                                                <select name="penerima_pks" id="penerima_pks" class="form-control" required>
                                                     <option value="">-Pilih-</option>
                                                     <option value="Ya" <?php if ($data->penerima_pks == "Ya") {
                                                                             echo "selected";
@@ -550,7 +545,7 @@
 
                                                     <p class="text-black mt-0 mb-1">Note : Perlu diperhatikan pilih prodi
                                                         1-10 diurutkan sesuai minat</p>
-                                                    <select class="form-control select2" multiple="multiple" id="prodii" name="prodii[]" data-placeholder="Pilih Prodi 1-10">
+                                                    <select class="form-control select2" multiple="multiple" id="prodii" name="prodii[]" data-placeholder="Pilih Prodi 1-10" required>
                                                         <?php foreach ($get_prodisepuluh as $x) { ?>
                                                             <option value=" <?php echo $x->id_prodi; ?>">
                                                                 <?php echo $x->nama_program_studi; ?></option>
@@ -571,7 +566,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>NIK Ayah
                                                 </label>
-                                                <input type="number" name="nik_ayah" id="nik_ayah" class="form-control form-control-alternative" placeholder="NIK Ayah .." value="<?php echo $data->nik_ayah ?>">
+                                                <input type="number" name="nik_ayah" id="nik_ayah" class="form-control form-control-alternative" placeholder="NIK Ayah .." value="<?php echo $data->nik_ayah ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -579,7 +574,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Nama Ayah
                                                 </label>
-                                                <input type="text" name="nama_ayah" id="nama_ayah" class="form-control form-control-alternative" placeholder="Nama Ayah .." value="<?php echo $data->nama_ayah ?>">
+                                                <input type="text" name="nama_ayah" id="nama_ayah" class="form-control form-control-alternative" placeholder="Nama Ayah .." value="<?php echo $data->nama_ayah ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -587,7 +582,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Tanggal Lahir Ayah
                                                 </label>
-                                                <input type="date" name="tgllahir_ayah" id="tgllahir_ayah" class="form-control form-control-alternative" placeholder="Tanggal Lahir Ayah .." value="<?php echo $data->tgllahir_ayah ?>">
+                                                <input type="date" name="tgllahir_ayah" id="tgllahir_ayah" class="form-control form-control-alternative" placeholder="Tanggal Lahir Ayah .." value="<?php echo $data->tgllahir_ayah ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -595,7 +590,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Pendidikan Ayah
                                                 </label>
-                                                <select name="pendidikan_ayah" id="pendidikan_ayah" class="form-control">
+                                                <select name="pendidikan_ayah" id="pendidikan_ayah" class="form-control" required>
                                                     <option value="">-Pilih Pendidikan Ayah-</option>
                                                     <?php foreach ($pendidikan as $x) { ?>
 
@@ -613,7 +608,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Pekerjaan Ayah
                                                 </label>
-                                                <select name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control">
+                                                <select name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control" required>
                                                     <option value="">-Pilih Pekerjaan Ayah-</option>
                                                     <?php foreach ($pekerjaan as $x) { ?>
 
@@ -632,7 +627,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Penghasilan Ayah
                                                 </label>
-                                                <select name="penghasilan_ayah" id="penghasilan_ayah" class="form-control">
+                                                <select name="penghasilan_ayah" id="penghasilan_ayah" class="form-control" required>
                                                     <option value="">-Pilih Penghasilan Ayah-</option>
                                                     <?php foreach ($penghasilan as $x) { ?>
                                                         <option value="<?php echo $x->id_penghasilan ?>" <?php if ($data->penghasilan_ayah == $x->id_penghasilan) {
@@ -649,7 +644,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>No TLP Ayah
                                                 </label>
-                                                <input type="number" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No TLP Ayah .." value="<?php echo $data->tlp_ayah ?>">
+                                                <input type="number" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No TLP Ayah .." value="<?php echo $data->tlp_ayah ?>" required>
 
                                             </div>
                                         </div>
@@ -660,7 +655,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>NIK Ibu
                                                 </label>
-                                                <input type="number" name="nik_ibu" id="nik_ibu" class="form-control form-control-alternative" placeholder="NIK Ibu .." value="<?php echo $data->nik_ibu ?>">
+                                                <input type="number" name="nik_ibu" id="nik_ibu" class="form-control form-control-alternative" placeholder="NIK Ibu .." value="<?php echo $data->nik_ibu ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -668,7 +663,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Nama Ibu
                                                 </label>
-                                                <input type="text" name="nama_ibu" id="nama_ibu" class="form-control form-control-alternative" placeholder="Nama Ibu .." value="<?php echo $data->nama_ibu ?>">
+                                                <input type="text" name="nama_ibu" id="nama_ibu" class="form-control form-control-alternative" placeholder="Nama Ibu .." value="<?php echo $data->nama_ibu ?>" required>
 
                                             </div>
                                         </div>
@@ -677,7 +672,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Tanggal Lahir Ibu
                                                 </label>
-                                                <input type="date" name="tgllahir_ibu" id="tgllahir_ibu" class="form-control form-control-alternative" placeholder="Tanggal Lahir Ibu .." value="<?php echo $data->tgllahir_ibu ?>">
+                                                <input type="date" name="tgllahir_ibu" id="tgllahir_ibu" class="form-control form-control-alternative" placeholder="Tanggal Lahir Ibu .." value="<?php echo $data->tgllahir_ibu ?>" required>
 
                                             </div>
                                         </div>
@@ -686,7 +681,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Pendidikan Ibu
                                                 </label>
-                                                <select name="pendidikan_ibu" id="pendidikan_ibu" class="form-control">
+                                                <select name="pendidikan_ibu" id="pendidikan_ibu" class="form-control" required>
                                                     <option value="">-Pilih Pendidikan Ibu-</option>
                                                     <?php foreach ($pendidikan as $x) { ?>
                                                         <option value="<?php echo $x->id_jenjang_didik ?>" <?php if ($data->pendidikan_ibu == $x->id_jenjang_didik) {
@@ -702,7 +697,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Pekerjaan Ibu
                                                 </label>
-                                                <select name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control">
+                                                <select name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control" required>
                                                     <option value="">-Pilih Pekerjaan Ibu-</option>
                                                     <?php foreach ($pekerjaan as $x) { ?>
 
@@ -720,7 +715,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Penghasilan Ibu
                                                 </label>
-                                                <select name="penghasilan_ibu" id="penghasilan_ibu" class="form-control">
+                                                <select name="penghasilan_ibu" id="penghasilan_ibu" class="form-control" required>
                                                     <option value="">-Pilih Penghasilan Ibu-</option>
                                                     <?php foreach ($penghasilan as $x) { ?>
                                                         <option value="<?php echo $x->id_penghasilan ?>" <?php if ($data->penghasilan_ibu == $x->id_penghasilan) {
@@ -737,7 +732,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>No TLP Ibu
                                                 </label>
-                                                <input type="number" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No TLP Ibu .." value="<?php echo $data->tlp_ibu ?>">
+                                                <input type="number" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No TLP Ibu .." value="<?php echo $data->tlp_ibu ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -752,7 +747,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>NIK Wali
                                                 </label>
-                                                <input type="number" name="nik_wali" id="nik_wali" class="form-control form-control-alternative" placeholder="NIK Wali .." value="<?php echo $data->nik_wali ?>">
+                                                <input type="number" name="nik_wali" id="nik_wali" class="form-control form-control-alternative" placeholder="NIK Wali .." value="<?php echo $data->nik_wali ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -760,7 +755,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Nama Wali
                                                 </label>
-                                                <input type="text" name="nama_wali" id="nama_wali" class="form-control form-control-alternative" placeholder="Nama Wali .." value="<?php echo $data->nama_ayah ?>">
+                                                <input type="text" name="nama_wali" id="nama_wali" class="form-control form-control-alternative" placeholder="Nama Wali .." value="<?php echo $data->nama_wali ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -768,7 +763,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Tanggal Lahir Wali
                                                 </label>
-                                                <input type="date" name="tgllahir_wali" id="tgllahir_wali" class=" form-control form-control-alternative" placeholder="Tanggal Lahir Wali .." value="<?php echo $data->tgllahir_wali ?>">
+                                                <input type="date" name="tgllahir_wali" id="tgllahir_wali" class=" form-control form-control-alternative" placeholder="Tanggal Lahir Wali .." value="<?php echo $data->tgllahir_wali ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -776,7 +771,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Pendidikan Wali
                                                 </label>
-                                                <select name="pendidikan_wali" id="pendidikan_wali" class="form-control">
+                                                <select name="pendidikan_wali" id="pendidikan_wali" class="form-control" required>
                                                     <option value="">-Pilih Pendidikan Wali-</option>
                                                     <?php foreach ($pendidikan as $x) { ?>
                                                         <option value="<?php echo $x->id_jenjang_didik ?>" <?php if ($data->pendidikan_wali == $x->id_jenjang_didik) {
@@ -793,7 +788,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Pekerjaan Wali
                                                 </label>
-                                                <select name="pekerjaan_wali" id="pekerjaan_wali" class="form-control">
+                                                <select name="pekerjaan_wali" id="pekerjaan_wali" class="form-control" required>
                                                     <option value="">-Pilih Pekerjaan Wali-</option>
                                                     <?php foreach ($pekerjaan as $x) { ?>
 
@@ -811,7 +806,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Penghasilan Wali
                                                 </label>
-                                                <select name="penghasilan_wali" id="penghasilan_wali" class="form-control">
+                                                <select name="penghasilan_wali" id="penghasilan_wali" class="form-control" required>
                                                     <option value="">-Pilih Penghasilan Wali-</option>
                                                     <?php foreach ($penghasilan as $x) { ?>
                                                         <option value="<?php echo $x->id_penghasilan ?>" <?php if ($data->penghasilan_wali == $x->id_penghasilan) {
@@ -828,7 +823,7 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>No TLP Wali
                                                 </label>
-                                                <input type="number" name="tlp_wali" id="tlp_wali" class="form-control form-control-alternative" placeholder="No TLP Wali .." value="<?php echo $data->tlp_wali ?>">
+                                                <input type="number" name="tlp_wali" id="tlp_wali" class="form-control form-control-alternative" placeholder="No TLP Wali .." value="<?php echo $data->tlp_wali ?>" required>
 
                                             </div>
                                         </div>
@@ -885,142 +880,19 @@
 <script>
     function validasi() {
 
-        var nama = document.getElementById("nama").value;
-        var jk = document.getElementById("jk").value;
-        var nisn = document.getElementById("nisn").value;
-        var nik_praja = document.getElementById("nik_praja").value;
-        var npwp = document.getElementById("npwp").value;
-        var tmpt_lahir = document.getElementById("tmpt_lahir").value;
-        var tgl_lahir = document.getElementById("tgl_lahir").value;
-        var agama = document.getElementById("agama").value;
-        var tlp_pribadi = document.getElementById("tlp_pribadi").value;
-        var tlp_rumah = document.getElementById("tlp_rumah").value;
-        var email = document.getElementById("email").value;
-
-        var alamat = document.getElementById("alamat").value;
-        var rt = document.getElementById("rt").value;
-        var rw = document.getElementById("rw").value;
-        var provinsi = document.getElementById("provinsi").value;
-        var kab_kota = document.getElementById("kab_kota").value;
-        var kecamatan = document.getElementById("kecamatan").value;
-        var nama_dusun = document.getElementById("nama_dusun").value;
-        var kelurahan = document.getElementById("kelurahan").value;
-        var kode_pos = document.getElementById("kode_pos").value;
-
-        var asdaf = document.getElementById("asdaf").value;
-        var jenis_tinggal = document.getElementById("jenis_tinggal").value;
-        var alat_transport = document.getElementById("alat_transport").value;
-        var penerima_pks = document.getElementById("penerima_pks").value;
-        var no_pks = document.getElementById("no_pks").value;
-        var prodi = document.getElementById("prodii").value;
-
-        var nik_ayah = document.getElementById("nik_ayah").value;
-        var nama_ayah = document.getElementById("nama_ayah").value;
-        var tgllahir_ayah = document.getElementById("tgllahir_ayah").value;
-        var pendidikan_ayah = document.getElementById("pendidikan_ayah").value;
-        var pekerjaan_ayah = document.getElementById("pekerjaan_ayah").value;
-        var penghasilan_ayah = document.getElementById("penghasilan_ayah").value;
-        var tlp_ayah = document.getElementById("tlp_ayah").value;
-
-        var nik_ibu = document.getElementById("nik_ibu").value;
-        var nama_ibu = document.getElementById("nama_ibu").value;
-        var tgllahir_ibu = document.getElementById("tgllahir_ibu").value;
-        var pendidikan_ibu = document.getElementById("pendidikan_ibu").value;
-        var pekerjaan_ibu = document.getElementById("pekerjaan_ibu").value;
-        var penghasilan_ibu = document.getElementById("penghasilan_ibu").value;
-        var tlp_ibu = document.getElementById("tlp_ibu").value;
-
-        var nik_wali = document.getElementById("nik_wali").value;
-        var nama_wali = document.getElementById("nama_wali").value;
-        var tgllahir_wali = document.getElementById("tgllahir_wali").value;
-        var pendidikan_wali = document.getElementById("pendidikan_wali").value;
-        var pekerjaan_wali = document.getElementById("pekerjaan_wali").value;
-        var penghasilan_wali = document.getElementById("penghasilan_wali").value;
-        var tlp_wali = document.getElementById("tlp_wali").value;
-
-
-
         var optionLength = $("#prodii :selected").length;
+		if (optionLength != 10 && optionLength != 0) {
 
-        if (
-            nama != "" &&
-            jk != "" &&
-            nisn != "" &&
-            nik_praja != "" &&
-            npwp != "" &&
-            tmpt_lahir != "" &&
-            tgl_lahir != "" &&
-            tlp_pribadi != "" &&
-            tlp_rumah != "" &&
-            email != "" &&
-
-            alamat != "" &&
-            rt != "" &&
-            rw != "" &&
-            provinsi != "" &&
-            kab_kota != "" &&
-            kecamatan != "" &&
-            nama_dusun != "" &&
-            kelurahan != "" &&
-            kode_pos != "" &&
-            asdaf != "" &&
-            jenis_tinggal != "" &&
-            alat_transport != "" &&
-            penerima_pks != "" &&
-            no_pks != "" &&
-            prodi != "" &&
-
-            nik_ayah != "" &&
-            nama_ayah != "" &&
-            tgllahir_ayah != "" &&
-            pendidikan_ayah != "" &&
-            pekerjaan_ayah != "" &&
-            penghasilan_ayah != "" &&
-            tlp_ayah != "" &&
-
-            nik_ibu != "" &&
-            nama_ibu != "" &&
-            tgllahir_ibu != "" &&
-            pendidikan_ibu != "" &&
-            pekerjaan_ibu != "" &&
-            penghasilan_ibu != "" &&
-            tlp_ibu != "" &&
-
-
-            nik_wali != "" &&
-            nama_wali != "" &&
-            tgllahir_wali != "" &&
-            pendidikan_wali != "" &&
-            pekerjaan_wali != "" &&
-            penghasilan_wali != "" &&
-            tlp_wali != ""
-
-
-        ) {
-            console.log(optionLength);
-
-            if (optionLength != 10 && optionLength != 0) {
-
-                Swal.fire(
-                    'Oops',
-                    'Periksa kembali data prodi! Anda baru mengisi <b>' + optionLength +
-                    '</b>  prodi, <b> prodi diurutkan 1-10 sesuai minat dan di wajibkan mengisi 10 Prodi  </b> !!',
-                    'question'
-                )
-                return false;
-            } else {
-                return true;
-            }
-
-
-        } else {
-            Swal.fire(
-                'Oops',
-                'Periksa kembali Data anda di Data Pribadi, Data Alamat, Data Orang Tua dan Data Wali, ada yang wajib diisi!!!',
-                'question'
-            )
-            return false;
-        }
+			Swal.fire(
+				'Oops',
+				'Periksa kembali data prodi! Anda baru mengisi <b>' + optionLength +
+				'</b>  prodi, <b> prodi diurutkan 1-10 sesuai minat dan di wajibkan mengisi 10 Prodi  </b> !!',
+				'question'
+		)
+			return false;
+		} else {
+			return true;
+		}
     }
 
     $('#penerima_pks').change(function() {
