@@ -364,7 +364,7 @@
                                                     <!-- <p>Inputan ini diisi <b> jika di kolom kecamatan tidak tertera </b>. jika datanya <b> kolom ini dapat diisi dengan "-" </b> </p> -->
 
                                                 </label>
-                                                <input type="text" name="backupkecamatan" id="backupkecamatan" class="form-control form-control-alternative" placeholder="backup kecamatan .." required>
+                                                <input type="text" name="backupkecamatan" id="backupkecamatan" class="form-control form-control-alternative" placeholder="backup kecamatan .." value="<?php echo $data->backupkecamatan ?>" required>
 
                                             </div>
                                         </div>
