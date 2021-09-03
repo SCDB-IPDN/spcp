@@ -224,7 +224,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Tanggal Lahir
@@ -232,7 +232,7 @@
                                                 <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control form-control-alternative" placeholder="Tanggal Lahir .." value="<?php echo $data->tgl_lahir ?>" required>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Agama
@@ -250,7 +250,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Nomor Telepon Rumah
@@ -260,17 +260,17 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Nomor Handphone
-                                                    <p>08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</p>
                                                 </label>
                                                 <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>" required>
-                                            </div>
+												<span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
+											</div>
                                         </div>
 
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Email
@@ -290,10 +290,10 @@
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Alamat
-                                                    <p>Cukup mengisikan <b> nama jalan </b> dan <b>nomor rumah</b> jika ada</p>
                                                 </label>
                                                 <textarea name="alamat" id="alamat" class="form-control form-control-alternative" placeholder="Alamat  .." required><?php echo $data->alamat ?></textarea>
-                                            </div>
+												<span style="font-size: 12px;">Note : Alamat Cukup diisi dengan <b> nama jalan </b> dan <b>nomor rumah</b> jika ada</span>
+											</div>
                                         </div>
                                         <div class=" col-lg-2">
                                             <div class="form-group">
@@ -356,7 +356,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font> Kecamatan Lainnya
@@ -364,13 +364,13 @@
                                                     <!-- <p>Inputan ini diisi <b> jika di kolom kecamatan tidak tertera </b>. jika datanya <b> kolom ini dapat diisi dengan "-" </b> </p> -->
 
                                                 </label>
-                                                <input type="text" name="backupkecamatan" id="backupkecamatan" class="form-control form-control-alternative" placeholder="backup kecamatan .." value="<?php echo $data->backupkecamatan ?>" required>
+                                                <input type="text" name="backupkecamatan" id="backupkecamatan" class="form-control form-control-alternative" placeholder="Kecamatan Lainnya .." value="<?php echo $data->backupkecamatan ?>" required>
 
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Nama Dusun
@@ -378,7 +378,7 @@
                                                 <input type="text" name="nama_dusun" id="nama_dusun" class="form-control form-control-alternative" placeholder="Nama Dusun .." value="<?php echo $data->nama_dusun ?>" required>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Kelurahan
@@ -390,10 +390,10 @@
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Kode Pos
-                                                    <p>Kode Pos Diisi Minimal 5 Angka</p>
                                                 </label>
                                                 <input type="tel" pattern="^[0-9]{5,}$" name="kode_pos" id="kode_pos" class="form-control form-control-alternative" placeholder="Kode Pos .." value="<?php echo $data->kode_pos ?>" required>
-                                            </div>
+												<span style="font-size: 12px;">Note : Kode Pos Diisi Minimal 5 Angka</span>
+											</div>
                                         </div>
                                     </div>
 
@@ -567,20 +567,18 @@
                                         </div>
 
                                         <?php if ($data->prodi  == NULL) { ?>
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-7">
                                                 <div class="form-group">
                                                     <label class="form-control-label">
                                                         <font color='red'>*</font>Prodi
                                                     </label>
-
-                                                    <p class="text-black mt-0 mb-1">Note : Perlu diperhatikan pilih prodi
-                                                        1-10 diurutkan sesuai minat</p>
                                                     <select class="form-control select2" multiple="multiple" id="prodii" name="prodii[]" data-placeholder="Pilih Prodi 1-10" required>
                                                         <?php foreach ($get_prodisepuluh as $x) { ?>
                                                             <option value=" <?php echo $x->id_prodi; ?>">
                                                                 <?php echo $x->nama_program_studi; ?></option>
                                                         <?php } ?>
                                                     </select>
+													<span style="font-size: 12px;">Note : Perlu diperhatikan pilih prodi 1-10 diurutkan sesuai minat</span>
                                                 </div>
                                             </div>
                                         <?php } ?>
@@ -669,14 +667,13 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Nomor HP Ayah
-                                                    <p>08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</p>
                                                 </label>
                                                 <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No HP Ayah .." value="<?php echo $data->tlp_ayah ?>" required>
-
+												<span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
                                             </div>
                                         </div>
                                     </div>
@@ -758,14 +755,14 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Nomor HP Ibu
-                                                    <p>08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</p>
                                                 </label>
-                                                <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No HP Ibu .." value="<?php echo $data->tlp_ibu ?>" required>
-                                            </div>
+												<input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No HP Ibu .." value="<?php echo $data->tlp_ibu ?>" required>	
+												<span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
+											</div>
                                         </div>
                                     </div>
                                 </div>
