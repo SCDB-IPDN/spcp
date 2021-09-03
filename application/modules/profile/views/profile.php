@@ -169,7 +169,7 @@
                                                     <font color='red'>*</font>Jenis Kelamin
                                                 </label>
                                                 <select name="jk" id="jk" class="form-control" required>
-                                                    <option value="" >-Pilih Jenis Kelamin-</option>
+                                                    <option value="">-Pilih Jenis Kelamin-</option>
                                                     <option value="L" <?php if ($data->jk == "L") {
                                                                             echo "selected";
                                                                         } ?>>Laki-Laki
@@ -189,7 +189,7 @@
                                                 <input type="number" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>" required>
                                             </div>
                                         </div>
-										<div class="col-lg-3">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-email">
                                                     <font color='red'>*</font>NIK
@@ -277,7 +277,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Alamat
-													<p>Cukup mengisikan nama jalan saja dan nomor rumah jika ada</p>
+                                                    <p>Cukup mengisikan nama jalan saja dan nomor rumah jika ada</p>
                                                 </label>
                                                 <textarea name="alamat" id="alamat" class="form-control form-control-alternative" placeholder="Alamat  .." required><?php echo $data->alamat ?></textarea>
                                             </div>
@@ -381,7 +381,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Asal Pendaftaran
                                                 </label>
-                                                <select name="asdaf" id="asdaf" class="form-control" required>
+                                                <select name="asdaf" id="asdaf" class="form-control" readonly>
                                                     <option value="">-Pilih Asal Pendaftaran-</option>
                                                     <?php foreach ($wilayah as $x) { ?>
                                                         <option value="<?php echo $x->nama_provinsi ?>" <?php if ($data->asdaf == $x->nama_provinsi) {
@@ -881,18 +881,18 @@
     function validasi() {
 
         var optionLength = $("#prodii :selected").length;
-		if (optionLength != 10 && optionLength != 0) {
+        if (optionLength != 10 && optionLength != 0) {
 
-			Swal.fire(
-				'Oops',
-				'Periksa kembali data prodi! Anda baru mengisi <b>' + optionLength +
-				'</b>  prodi, <b> prodi diurutkan 1-10 sesuai minat dan di wajibkan mengisi 10 Prodi  </b> !!',
-				'question'
-		)
-			return false;
-		} else {
-			return true;
-		}
+            Swal.fire(
+                'Oops',
+                'Periksa kembali data prodi! Anda baru mengisi <b>' + optionLength +
+                '</b>  prodi, <b> prodi diurutkan 1-10 sesuai minat dan di wajibkan mengisi 10 Prodi  </b> !!',
+                'question'
+            )
+            return false;
+        } else {
+            return true;
+        }
     }
 
     $('#penerima_pks').change(function() {
