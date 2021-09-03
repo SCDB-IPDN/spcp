@@ -92,8 +92,8 @@ class Dashboard extends CI_Controller
 			$kecamatan = $r->kecamatan == NULL ? "<i><font>Tidak ada data</font></i>" : $r->kecamatan;
 			$kode_pos = $r->kode_pos == NULL ? "<i><font>Tidak ada data</font></i>" : $r->kode_pos;
 			$jenis_tinggal = $r->jenis_tinggal == NULL ? "<i><font>Tidak ada data</font></i>" : $r->jenis_tinggal;
-			$tlp_pribadi = $r->tlp_pribadi == NULL ? "<i><font>Tidak ada data</font></i>" : $r->tlp_rumah;
-			$tlp_rumah = $r->tlp_rumah == NULL ? "<i><font>Tidak ada data</font></i>" : $r->email;
+			$tlp_pribadi = $r->tlp_pribadi == NULL ? "<i><font>Tidak ada data</font></i>" : $r->tlp_pribadi;
+			$tlp_rumah = $r->tlp_rumah == NULL ? "<i><font>Tidak ada data</font></i>" : $r->tlp_rumah;
 			$email = $r->email == NULL ? "<i><font>Tidak ada data</font></i>" : $r->email;
 			$kewarganegaraan = $r->kewarganegaraan == NULL ? "<i><font>Tidak ada data</font></i>" : $r->kewarganegaraan;
 			$jenis_pendaftaran = $r->jenis_pendaftaran == NULL ? "<i><font>Tidak ada data</font></i>" : $r->jenis_pendaftaran;

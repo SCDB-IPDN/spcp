@@ -186,7 +186,7 @@
                                                 <label class="form-control-label" for="input-username">
                                                     <font color='red'>*</font>NISN
                                                 </label>
-                                                <input type="number" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>" required>
+                                                <input type="tel" pattern="^[0-9]{10,}$" name="nisn" id="nisn" class="form-control form-control-alternative" placeholder="NISN .." value="<?php echo $data->nisn ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -194,7 +194,7 @@
                                                 <label class="form-control-label" for="input-email">
                                                     <font color='red'>*</font>NIK
                                                 </label>
-                                                <input type="number" name="nik_praja" id="nik_praja" class="form-control form-control-alternative" placeholder="NIK .." value="<?php echo $data->nik_praja ?>" required>
+                                                <input type="tel" pattern="^[0-9]{16,}$" name="nik_praja" id="nik_praja" class="form-control form-control-alternative" placeholder="NIK .." value="<?php echo $data->nik_praja ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -244,15 +244,15 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
-                                                    <font color='red'>*</font>No TLP
+                                                    <font color='red'>*</font>Nomor Telepon Rumah
                                                 </label>
-                                                <input type="number" name="tlp_rumah" id="tlp_rumah" class="form-control form-control-alternative" placeholder="No Tlp .." value="<?php echo $data->tlp_rumah ?>" required>
+                                                <input type="number" name="tlp_rumah" id="tlp_rumah" class="form-control form-control-alternative" placeholder="No Telepon Rumah .." value="<?php echo $data->tlp_rumah ?>" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
-                                                    <font color='red'>*</font>No HP
+                                                    <font color='red'>*</font>Nomor Handphone
 													<p>08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</p>
                                                 </label>
                                                 <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>" required>
@@ -365,8 +365,9 @@
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Kode Pos
+													<p>Kode Pos Diisi Minimal 5 Angka</p>
                                                 </label>
-                                                <input type="text" name="kode_pos" id="kode_pos" class="form-control form-control-alternative" placeholder="Kode Pos .." value="<?php echo $data->kode_pos ?>" required>
+                                                <input type="tel" pattern="^[0-9]{5,}$" name="kode_pos" id="kode_pos" class="form-control form-control-alternative" placeholder="Kode Pos .." value="<?php echo $data->kode_pos ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -643,9 +644,10 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label">
-                                                    <font color='red'>*</font>No TLP Ayah
+                                                    <font color='red'>*</font>Nomor HP Ayah
+													<p>08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</p>
                                                 </label>
-                                                <input type="number" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No TLP Ayah .." value="<?php echo $data->tlp_ayah ?>" required>
+                                                <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No HP Ayah .." value="<?php echo $data->tlp_ayah ?>" required>
 
                                             </div>
                                         </div>
@@ -731,9 +733,10 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label">
-                                                    <font color='red'>*</font>No TLP Ibu
+                                                    <font color='red'>*</font>Nomor HP Ibu
+													<p>08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</p>
                                                 </label>
-                                                <input type="number" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No TLP Ibu .." value="<?php echo $data->tlp_ibu ?>" required>
+                                                <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No HP Ibu .." value="<?php echo $data->tlp_ibu ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -822,9 +825,9 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label">
-                                                    <font color='red'>*</font>No TLP Wali
+                                                    <font color='red'>*</font>Nomor HP Wali
                                                 </label>
-                                                <input type="number" name="tlp_wali" id="tlp_wali" class="form-control form-control-alternative" placeholder="No TLP Wali .." value="<?php echo $data->tlp_wali ?>" required>
+                                                <input type="number" name="tlp_wali" id="tlp_wali" class="form-control form-control-alternative" placeholder="No HP Wali .." value="<?php echo $data->tlp_wali ?>" required>
 
                                             </div>
                                         </div>
@@ -908,7 +911,17 @@
         //Initialize Select2 Elements
         $('.select2').select2()
 
+		$("select").on("select2:select", function(evt) {
+            var element = evt.params.data.element;
+            var $element = $(element);
+
+            $element.detach();
+            $(this).append($element);
+            $(this).trigger("change");
+        });
+
     });
+	
 
     $('#provinsi').change(function() {
         var kab_kota = $(this).val();

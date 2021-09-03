@@ -292,8 +292,8 @@
                                                 <th>Kecamatan</th>
                                                 <th>Kode Pos</th>
                                                 <th>Jenis Tinggal</th>
-                                                <th>Tlp Pribadi</th>
-                                                <th>Tlp Rumah</th>
+                                                <th>Nomor Handphone</th>
+                                                <th>Nomor Telepon Rumah</th>
                                                 <th>Email</th>
                                                 <th>Kewarganegaraan</th>
                                                 <th>Jenis Pendaftaran</th>
@@ -313,14 +313,15 @@
                                                 <th>Pendidikan Ayah</th>
                                                 <th>Pekerjaan Ayah</th>
                                                 <th>Penghasilan Ayah</th>
-                                                <th>Tlp Ayah</th>
+                                                <th>Nomor Handphone Ayah</th>
+												
                                                 <th>NIK Ibu</th>
                                                 <th>Nama Ibu</th>
                                                 <th>Tgl Lahir Ibu</th>
                                                 <th>Pendidikan Ibu</th>
                                                 <th>Pekerjaan Ibu</th>
                                                 <th>Penghasilan Ibu</th>
-                                                <th>Tlp Ibu</th>
+                                                <th>Nomor Handphone Ibu</th>
 
                                                 <th>NIK Wali</th>
                                                 <th>Nama Wali</th>
@@ -328,7 +329,7 @@
                                                 <th>Pendidikan Wali</th>
                                                 <th>Pekerjaan Wali</th>
                                                 <th>Penghasilan Wali</th>
-                                                <th>Tlp Wali</th>
+                                                <th>NOmor Handphone Wali</th>
 
                                                 <th>Update Date</th>
 
