@@ -123,9 +123,9 @@
                                 </div>
                                 <p><b><?php echo $this->session->flashdata('login') ?></b></p>
                                 Lupa Password ? Hubungi Kami <a
-                                    href="https://api.whatsapp.com/send?phone=6287804813232&text=Izin Bertanya Ibu Hasna"
+                                    href="https://api.whatsapp.com/send?phone=6287804813232&text=Halo Kak Ana, saya izin bertanya mengenai ..."
                                     target="_blank">Admin 1</a> Atau <a
-                                    href="https://api.whatsapp.com/send?phone=6281317828035&text=Izin Bertanya Ibu Bella"
+                                    href="https://api.whatsapp.com/send?phone=6281317828035&text=Halo Kak Bella, saya izin bertanya mengenai ..."
                                     target="_blank">Admin 2</a>
                                 <div class="card-footer text-center">
                                     <button type="submit"
