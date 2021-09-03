@@ -57,6 +57,17 @@
 
                                     <br>
                                 </div>
+
+                                <div class="col-12">
+                                    <center>
+                                        <h1 class="mb-0 ">Jumlah Praja yang sudah registrasi : </h1>
+                                        <h1 class="mb-0" style="color:red;"> <?php foreach ($total as $x) { ?>
+                                                <?php echo ($x->total) . " /1.123" ?>
+                                            <?php } ?>
+                                    </center>
+
+                                    <br>
+                                </div>
                                 <br>
                             </div>
                         </div>
@@ -314,7 +325,7 @@
                                                 <th>Pekerjaan Ayah</th>
                                                 <th>Penghasilan Ayah</th>
                                                 <th>Nomor Handphone Ayah</th>
-												
+
                                                 <th>NIK Ibu</th>
                                                 <th>Nama Ibu</th>
                                                 <th>Tgl Lahir Ibu</th>

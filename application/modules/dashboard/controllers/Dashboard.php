@@ -39,6 +39,9 @@ class Dashboard extends CI_Controller
 		$prodreal = $this->Dashboard_model->get_prodreal()->result();
 		$x['prodreal'] = $prodreal;
 
+		$total = $this->Dashboard_model->get_total()->result();
+		$x['total'] = $total;
+
 		// var_dump($data);
 		// exit;
 

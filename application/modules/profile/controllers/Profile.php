@@ -108,6 +108,7 @@ class Profile extends CI_Controller
 			$editnya['provinsi'] = $this->input->post('provinsi', true);
 			$editnya['agama'] = $this->input->post('agama', true);
 			$editnya['kecamatan'] = $this->input->post('kecamatan', true);
+			$editnya['backupkecamatan'] = $this->input->post('backupkecamatan', true);
 			$editnya['tlp_pribadi'] = $this->input->post('tlp_pribadi', true);
 			$editnya['tlp_rumah'] = $this->input->post('tlp_rumah', true);
 			$editnya['email'] = $this->input->post('email', true);
@@ -156,7 +157,7 @@ class Profile extends CI_Controller
 			$editnya['asdaf'] = $this->input->post('asdaf', true);
 			$tudey = date("Y-m-d H:i:s");
 			$editnya['update_date'] = $tudey;
-			
+
 			$data = $this->Profile_model->get_data();
 			$x['data'] = $data[0];
 

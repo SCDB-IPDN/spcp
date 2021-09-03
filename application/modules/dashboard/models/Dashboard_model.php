@@ -92,4 +92,10 @@ class Dashboard_model extends CI_Model
         $prov = $this->db->query("SELECT program_studi.nama_program_studi as nama, COUNT(data_capra.prodi) as jumlah FROM `data_capra` join program_studi on data_capra.prodi = program_studi.id_prodi GROUP BY prodi");
         return $prov;
     }
+
+    public function get_total()
+    {
+        $prov = $this->db->query("SELECT COUNT(nama) as total FROM `data_capra` where update_date != 'NULL' ");
+        return $prov;
+    }
 }
