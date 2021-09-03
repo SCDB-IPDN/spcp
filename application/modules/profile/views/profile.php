@@ -142,8 +142,8 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-username">No SPCP</label>
-                                                <input type="text" name="no_spcp" id="no_spcp" class="form-control form-control-alternative" placeholder="No SPCP .." value="<?php echo $data->no_spcp ?>" readonly>
+                                                <label class="form-control-label" for="input-username">Nomor Peserta</label>
+                                                <input type="text" name="no_spcp" id="no_spcp" class="form-control form-control-alternative" placeholder="Nomor Peserta .." value="<?php echo $data->no_spcp ?>" readonly>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">

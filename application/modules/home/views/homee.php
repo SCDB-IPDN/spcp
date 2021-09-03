@@ -100,7 +100,7 @@
         <div class="container mt-5 wow bounceInRight">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-              <h2 class="module-title font-alt">Tentang CPRA IPDN</h2>
+              <h2 class="module-title font-alt">Tentang CAPRA IPDN</h2>
               <div class="module-subtitle font-serif">Selamat Datang Calon Praja IPDN.</div>
             </div>
           </div>

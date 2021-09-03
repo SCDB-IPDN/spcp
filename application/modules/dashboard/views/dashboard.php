@@ -279,7 +279,7 @@
                                                 <th>Tanggal Lahir</th>
                                                 <th>NISN</th>
                                                 <th>NPWP</th>
-                                                <th>No SPCP</th>
+                                                <th>Nomor Peserta</th>
                                                 <th>NIK</th>
                                                 <th>Agana</th>
                                                 <th>Alamat</th>

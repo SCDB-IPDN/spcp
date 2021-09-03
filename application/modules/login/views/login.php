@@ -110,7 +110,7 @@
                                         </span>
                                     </div>
                                     <input type="text" name="spcp" class="form-control"
-                                        placeholder="Masukkan no spcp atau npp">
+                                        placeholder="Masukkan nomor peserta atau npp">
                                 </div>
                                 <div class="input-group no-border input-lg">
                                     <div class="input-group-prepend">
