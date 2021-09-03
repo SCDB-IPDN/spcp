@@ -253,8 +253,9 @@
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>No HP
+													<p>08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</p>
                                                 </label>
-                                                <input type="number" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>" required>
+                                                <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>" required>
                                             </div>
                                         </div>
 
