@@ -266,8 +266,8 @@
                                                     <font color='red'>*</font>Nomor Handphone
                                                 </label>
                                                 <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_pribadi" id="tlp_pribadi" class="form-control form-control-alternative" placeholder="No HP .." value="<?php echo $data->tlp_pribadi ?>" required>
-												<span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
-											</div>
+                                                <span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
+                                            </div>
                                         </div>
 
                                         <div class="col-lg-6">
@@ -292,8 +292,8 @@
                                                     <font color='red'>*</font>Alamat
                                                 </label>
                                                 <textarea name="alamat" id="alamat" class="form-control form-control-alternative" placeholder="Alamat  .." required><?php echo $data->alamat ?></textarea>
-												<span style="font-size: 12px;">Note : Alamat Cukup diisi dengan <b> nama jalan </b> dan <b>nomor rumah</b> jika ada</span>
-											</div>
+                                                <span style="font-size: 12px;">Note : Alamat Cukup diisi dengan <b> nama jalan </b> dan <b>nomor rumah</b> jika ada</span>
+                                            </div>
                                         </div>
                                         <div class=" col-lg-2">
                                             <div class="form-group">
@@ -392,8 +392,8 @@
                                                     <font color='red'>*</font>Kode Pos
                                                 </label>
                                                 <input type="tel" pattern="^[0-9]{5,}$" name="kode_pos" id="kode_pos" class="form-control form-control-alternative" placeholder="Kode Pos .." value="<?php echo $data->kode_pos ?>" required>
-												<span style="font-size: 12px;">Note : Kode Pos Diisi Minimal 5 Angka</span>
-											</div>
+                                                <span style="font-size: 12px;">Note : Kode Pos Diisi Minimal 5 Angka</span>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -411,7 +411,7 @@
                                                 <label class="form-control-label" for="input-last-name">
                                                     <font color='red'>*</font>Asal Pendaftaran
                                                 </label>
-                                                <select name="asdaf" id="asdaf" class="form-control" readonly>
+                                                <select name="asdaf" id="asdaf" class="form-control" disabled>
                                                     <option value="">-Pilih Asal Pendaftaran-</option>
                                                     <?php foreach ($wilayah as $x) { ?>
                                                         <option value="<?php echo $x->nama_provinsi ?>" <?php if ($data->asdaf == $x->nama_provinsi) {
@@ -578,7 +578,7 @@
                                                                 <?php echo $x->nama_program_studi; ?></option>
                                                         <?php } ?>
                                                     </select>
-													<span style="font-size: 12px;">Note : Perlu diperhatikan pilih prodi 1-10 diurutkan sesuai minat</span>
+                                                    <span style="font-size: 12px;">Note : Perlu diperhatikan pilih prodi 1-10 diurutkan sesuai minat</span>
                                                 </div>
                                             </div>
                                         <?php } ?>
@@ -673,7 +673,7 @@
                                                     <font color='red'>*</font>Nomor HP Ayah
                                                 </label>
                                                 <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ayah" id="tlp_ayah" class="form-control form-control-alternative" placeholder="No HP Ayah .." value="<?php echo $data->tlp_ayah ?>" required>
-												<span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
+                                                <span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
                                             </div>
                                         </div>
                                     </div>
@@ -760,9 +760,9 @@
                                                 <label class="form-control-label">
                                                     <font color='red'>*</font>Nomor HP Ibu
                                                 </label>
-												<input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No HP Ibu .." value="<?php echo $data->tlp_ibu ?>" required>	
-												<span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
-											</div>
+                                                <input type="tel" pattern="^08[0-9]{8,}$" name="tlp_ibu" id="tlp_ibu" class="form-control form-control-alternative" placeholder="No HP Ibu .." value="<?php echo $data->tlp_ibu ?>" required>
+                                                <span style="font-size: 12px;">Note: 08xxxxxxxxx (Terdiri dari panjang minimal 10 dan selalu dimulai dengan 08)</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -250,6 +250,49 @@
                                 <div class="row align-items-center">
                                     <div class="col-12">
                                         <center>
+                                            <h1 class="mb-0">DATA PRAJA ANGKATAN 32 TAHUN <?= date('Y') ?> YANG BELUM MELENGKAPI DATA</h1>
+                                        </center>
+
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <br>
+                                <div class="panel-body">
+
+                                    <table id="prajakosong" class="table table-striped table-bordered table-td-valign-middle" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>No SPCP</th>
+                                                <th>Nama</th>
+                                                <th>Asdaf</th>
+                                                <th>Jenis Kelamin</th>
+
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <!-- </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid mt-5">
+                <div class="row">
+
+                    <div class="col-xl-12 order-xl-1">
+                        <div class="card bg-secondary shadow">
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <center>
                                             <h1 class="mb-0">DATA PRAJA ANGKATAN 32 TAHUN <?= date('Y') ?></h1>
                                         </center>
 
@@ -266,6 +309,7 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
+                                                <th>No SPCP</th>
                                                 <th>NPP</th>
                                                 <th>Nama</th>
                                                 <th>Jenis Kelamin</th>
@@ -442,8 +486,33 @@
         }
 
 
-    })
+    });
 </script>
+
+<script>
+    $(document).ready(function() {
+
+        if ($('#prajakosong').length !== 0) {
+            var url = 'dashboard/get_prajakosong';
+
+            $('#prajakosong').dataTable({
+                // dom: 'Bfrtip',
+                dom: '<"row"<"col-sm-5"B><"col-sm-7"fr>>t<"row"<"col-sm-5"i><"col-sm-7"p>>',
+                buttons: [
+                    'copy', 'excel', 'print'
+                ],
+                responsive: true,
+                "ajax": {
+                    "url": url,
+                    "dataSrc": ""
+                }
+            });
+        }
+
+
+    });
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 

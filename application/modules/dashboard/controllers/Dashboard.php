@@ -42,6 +42,10 @@ class Dashboard extends CI_Controller
 		$total = $this->Dashboard_model->get_total()->result();
 		$x['total'] = $total;
 
+		$kosong = $this->Dashboard_model->kosong()->result();
+		$x['kosong'] = $kosong;
+
+
 		// var_dump($data);
 		// exit;
 
@@ -59,6 +63,7 @@ class Dashboard extends CI_Controller
 
 		$no = 1;
 		foreach ($data as $r) {
+			$no_spcp = $r->no_spcp == NULL ? "<i><font>Tidak ada data</font></i>" : $r->no_spcp;
 			$npp = $r->npp == NULL ? "<i><font>Tidak ada data</font></i>" : $r->npp;
 			$nama = $r->nama == NULL ? "<i><font>Tidak ada data</font></i>" : $r->nama;
 			$jk = $r->jk == NULL ? "<i><font>Tidak ada data</font></i>" : $r->jk;
@@ -137,7 +142,7 @@ class Dashboard extends CI_Controller
 
 			$dataall[] = array(
 				$no++,
-
+				$no_spcp,
 				$npp,
 				$nama,
 				$jk,
@@ -213,6 +218,35 @@ class Dashboard extends CI_Controller
 				$tlp_wali,
 
 				$update_date
+
+			);
+		}
+		echo json_encode($dataall);
+	}
+
+
+	function get_prajakosong()
+	{
+		// $data = $this->Praja_model->get_praja()->result();
+		$kosong = $this->Dashboard_model->kosong()->result();
+		$x['kosong'] = $kosong;
+
+		$dataall = array();
+
+		$no = 1;
+		foreach ($kosong as $r) {
+			$no_spcp = $r->no_spcp == NULL ? "<i><font>Tidak ada data</font></i>" : $r->no_spcp;
+			$nama = $r->nama == NULL ? "<i><font>Tidak ada data</font></i>" : $r->nama;
+			$jenis_kelamin = $r->jenis_kelamin == NULL ? "<i><font>Tidak ada data</font></i>" : $r->jenis_kelamin;
+			$asdaf = $r->asdaf == NULL ? "<i><font>Tidak ada data</font></i>" : $r->asdaf;
+
+			$dataall[] = array(
+				$no++,
+				$no_spcp,
+				$nama,
+				$asdaf,
+				$jenis_kelamin
+
 
 			);
 		}
