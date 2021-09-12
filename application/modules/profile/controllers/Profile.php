@@ -154,7 +154,7 @@ class Profile extends CI_Controller
 			$editnya['status'] = $this->input->post('status', true);
 			$editnya['angkatan'] = $this->input->post('angkatan', true);
 			$editnya['tingkat'] = $this->input->post('tingkat', true);
-			$editnya['asdaf'] = $this->input->post('asdaf', true);
+			// $editnya['asdaf'] = $this->input->post('asdaf', true);
 			$tudey = date("Y-m-d H:i:s");
 			$editnya['update_date'] = $tudey;
 
