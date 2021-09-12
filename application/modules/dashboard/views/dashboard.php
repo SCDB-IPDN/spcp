@@ -62,7 +62,7 @@
                                     <center>
                                         <h1 class="mb-0 ">Jumlah Praja yang sudah registrasi : </h1>
                                         <h1 class="mb-0" style="color:red;"> <?php foreach ($total as $x) { ?>
-                                                <?php echo ($x->total) . " /1.122" ?>
+                                                <?php echo ($x->total) . " /1.121" ?>
                                             <?php } ?>
                                     </center>
 
