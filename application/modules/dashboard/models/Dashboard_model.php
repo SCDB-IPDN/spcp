@@ -99,6 +99,12 @@ class Dashboard_model extends CI_Model
         return $prov;
     }
 
+    public function get_seluruh()
+    {
+        $prov = $this->db->query("SELECT COUNT(nama) as total FROM data_capra ");
+        return $prov;
+    }
+
     public function kosong()
     {
         $query = $this->db->query("SELECT no_spcp, nama, asdaf, CASE WHEN jk = 'L' THEN 'Laki-Laki' WHEN jk = 'P' THEN 'Perempuan' END AS jenis_kelamin FROM data_capra WHERE kewarganegaraan IS NULL ");

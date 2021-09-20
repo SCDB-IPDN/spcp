@@ -42,6 +42,9 @@ class Dashboard extends CI_Controller
 		$total = $this->Dashboard_model->get_total()->result();
 		$x['total'] = $total;
 
+		$seluruh = $this->Dashboard_model->get_seluruh()->result();
+		$x['seluruh'] = $seluruh;
+
 		$kosong = $this->Dashboard_model->kosong()->result();
 		$x['kosong'] = $kosong;
 
